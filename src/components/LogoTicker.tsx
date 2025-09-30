@@ -14,7 +14,7 @@ function LogoTicker({
   return (
     <div className="relative mx-auto mt-14 max-w-7xl">
       <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400">
-        Trusted by teams at
+        Trusted by bartenders at
       </p>
 
       <div className="group relative mt-6 overflow-hidden">
@@ -30,7 +30,7 @@ function LogoTicker({
 
         {/* Track */}
         <div
-          className="flex w-max gap-8 pr-8 will-change-transform motion-safe:[animation:marquee_var_linear_infinite] group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]"
+          className="flex w-max gap-8 pr-8 will-change-transform animate-[marquee_linear_infinite] motion-reduce:animate-none group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]"
           style={{ animationDuration: `${speed}s` }}
           aria-label="Customer logos marquee"
         >
@@ -72,3 +72,5 @@ function LogoTicker({
     </div>
   );
 }
+
+export default LogoTicker

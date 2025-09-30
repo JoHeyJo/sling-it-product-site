@@ -1,4 +1,4 @@
-import React from "react";
+import LogoTicker from "./LogoTicker";
 
 /**
  * Hero (Responsive)
@@ -154,32 +154,9 @@ export default function Hero({
             </div>
           </div>
         </div>
-
-        {/* Logo wall */}
-        {logos && logos.length > 0 && (
-          <div className="mx-auto mt-14 max-w-7xl">
-            <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400">
-              Trusted by bartenders at
-            </p>
-            <div className="mt-6 grid grid-cols-2 items-center gap-6 sm:grid-cols-3 md:grid-cols-6">
-              {logos.map((logo) => (
-                <div
-                  key={logo.name}
-                  className="flex items-center justify-center rounded-xl border border-dashed border-gray-200 p-3 dark:border-white/10"
-                >
-                  <img
-                    src={logo.url}
-                    alt={logo.name}
-                    className="h-8 w-auto opacity-70"
-                    loading="lazy"
-                    width={160}
-                    height={32}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        
+        {/* Logo ticker */}
+        {logos && logos.length > 0 && <LogoTicker logos={logos} />}
       </div>
     </section>
   );
