@@ -1,6 +1,5 @@
 import Marquee from "react-fast-marquee";
 
-// // ADD
 type Logo = { name: string; url: string };
 
 function LogoTicker({
@@ -10,7 +9,7 @@ function LogoTicker({
   logos?: Logo[];
   speed?: number;
 }) {
-  //   // Duplicate the list to create a seamless loop
+  // Duplicate the list to fill in space for endless loop
   const items = [...logos, ...logos];
 
   return (
