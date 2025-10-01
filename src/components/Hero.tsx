@@ -26,6 +26,8 @@ import LogoTicker from "./LogoTicker";
  * />
  */
 
+
+
 export type HeroProps = {
   eyebrow?: string;
   title: string;

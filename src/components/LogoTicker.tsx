@@ -9,7 +9,7 @@ function LogoTicker({
   speed?: number;
 }) {
   // Duplicate the list to create a seamless loop
-  const items = [...logos, ...logos];
+  const items = [...logos, ...logos, ...logos];
 
   return (
     <div className="relative mx-auto mt-14 max-w-7xl">
@@ -30,7 +30,7 @@ function LogoTicker({
 
         {/* Track */}
         <div
-          className="flex w-max gap-8 pr-8 will-change-transform animate-[marquee_linear_infinite] motion-reduce:animate-none group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]"
+          className="flex w-max gap-8 will-change-transform animate-[marquee_linear_infinite] motion-reduce:animate-none group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]"
           style={{ animationDuration: `${speed}s` }}
           aria-label="Customer logos marquee"
         >
@@ -43,7 +43,7 @@ function LogoTicker({
                 src={logo.url}
                 alt={logo.name}
                 className="h-8 w-auto opacity-70"
-                loading="lazy"
+                loading="eager"
                 width={160}
                 height={32}
               />
@@ -54,21 +54,11 @@ function LogoTicker({
 
       {/* Keyframes + reduced motion */}
       <style>{`
-        @keyframes marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        .motion-safe\\:[animation:marquee_var_linear_infinite] {
-          animation-name: marquee;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .motion-safe\\:[animation:marquee_var_linear_infinite] {
-            animation: none !important;
-          }
-        }
-      `}</style>
+  @keyframes marquee {
+    from { transform: translate3d(0,0,0); }
+    to   { transform: translate3d(-33.3333333333333%,0,0); }
+  }
+`}</style>
     </div>
   );
 }
