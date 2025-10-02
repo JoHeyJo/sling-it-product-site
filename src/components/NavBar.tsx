@@ -99,7 +99,9 @@ function NavBar({
 
         {/* Mobile panel */}
         {open && (
-          <div className="md:hidden border-t border-white/10 dark:bg-grey-900 dark:border-white/10">
+          <div
+            className="md:hidden border-t border-black/5 dark:border-white/10 
+               bg-white/70 dark:bg-gray-900/80 backdrop-blur-md">
             <nav className="px-2 py-3">
               {links.map((l) => (
                 <a

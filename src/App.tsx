@@ -3,13 +3,8 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-    
-      <div className="min-h-screen dark:bg-gray-900">
-        <NavBar />
-        </div>
-
-      <div className="pt-16 sm:pt-20">
+    <div className="min-h-screen dark:bg-gray-900">
+      <NavBar />
       <Hero
         eyebrow="NEW"
         title="Manage your recipes faster while slinging drinks! "
@@ -40,7 +35,6 @@ function App() {
         ]}
       />
     </div>
-    </>
   );
 }
 
