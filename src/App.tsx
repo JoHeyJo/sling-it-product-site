@@ -1,6 +1,8 @@
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import ProblemSolution from "./sections/ProblemSolution";
+import Features from "./sections/Features";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
           },
         ]}
       />
+      <ProblemSolution />
+      <Features />
       <Footer />
     </div>
   );
