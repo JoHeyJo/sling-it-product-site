@@ -1,12 +1,15 @@
-import Card from "./Card";
 import Hero from "./components/Hero";
-import ThemeToggle from "./components/ToggleTheme";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="bg-white dark:bg-gray-900">
-      <ThemeToggle />
-      <Card />
+    <>
+    
+      <div className="min-h-screen dark:bg-gray-900">
+        <NavBar />
+        </div>
+
+      <div className="pt-16 sm:pt-20">
       <Hero
         eyebrow="NEW"
         title="Manage your recipes faster while slinging drinks! "
@@ -37,6 +40,7 @@ function App() {
         ]}
       />
     </div>
+    </>
   );
 }
 
