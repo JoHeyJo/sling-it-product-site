@@ -12,21 +12,3 @@ export default (() => {
     document.documentElement.classList.remove("dark");
   }
 })();
-
-
-// Adds/removes the 'dark' class on <html>.
-// export function setTheme(mode: "light" | "dark") {
-//   const root = document.documentElement;
-//   root.classList.toggle("dark", mode === "dark");
-// }
-
-// // On first load, prefer saved choice → else system preference.
-// export function initTheme() {
-//   const saved = localStorage.getItem("theme");
-//   if (saved === "light" || saved === "dark") {
-//     setTheme(saved);
-//   } else {
-//     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-//     setTheme(prefersDark ? "dark" : "light");
-//   }
-// }

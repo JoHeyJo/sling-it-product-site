@@ -63,7 +63,7 @@ export default function Hero({
         <div className="absolute left-1/2 top-[-10%] h-[60rem] w-[120rem] -translate-x-1/2 bg-gradient-to-tr from-indigo-300 via-sky-300 to-emerald-300 blur-3xl dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}
           <div>

@@ -1,3 +1,4 @@
+import Card from "./Card";
 import Hero from "./components/Hero";
 import ThemeToggle from "./components/ToggleTheme";
 
@@ -5,6 +6,7 @@ function App() {
   return (
     <div className="bg-white dark:bg-gray-900">
       <ThemeToggle />
+      <Card />
       <Hero
         eyebrow="NEW"
         title="Manage your recipes faster while slinging drinks! "
