@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           },
           {
             name: "MadOak",
-            url: "https://dummyimage.com/160x32/000/fff&text=Piper",
+            url: "https://dum myimage.com/160x32/000/fff&text=Piper",
           },
           {
             name: "Globex",
@@ -34,6 +35,7 @@ function App() {
           },
         ]}
       />
+      <Footer />
     </div>
   );
 }
