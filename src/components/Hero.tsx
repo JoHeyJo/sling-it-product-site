@@ -63,15 +63,16 @@ export default function Hero({
           // from-indigo-300 via-sky-300 to-emerald-300 blur-3xl
           // left-1/2 top-[-10%] h-[60rem] w-[120rem] -translate-x-1/2
           // bg-gradient-to-tr dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40
-          className="absolute bg-gradient-to-br dark:from-gray-900/90 dark:to-gray-800/80"
+          // className="absolute "
         />
       </div>
       <div
         id="Hero-foreground"
         className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
-             bg-gradient-to-br from-white/80 to-gray-50/60 
+             from-white/80 to-gray-50/60 
              backdrop-blur-sm text-gray-900 
-             bg-gradient-to-br dark:from-gray-900/90 dark:to-gray-800/80"
+             bg-gradient-to-br
+             dark:from-gray-900/90 dark:to-gray-800/80"
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}
