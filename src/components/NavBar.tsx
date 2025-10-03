@@ -8,14 +8,9 @@ type NavBarProps = {
 };
 
 function NavBar({
-  logo = <span className="font-semibold">YourLogo</span>,
-  links = [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Docs", href: "#docs" },
-    { label: "Blog", href: "#blog" },
-  ],
-  cta = { label: "Get Started", href: "#get-started" },
+  logo,
+  links,
+  cta,
 }: NavBarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);

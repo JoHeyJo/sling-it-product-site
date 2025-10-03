@@ -8,7 +8,16 @@ import UseCases from "./sections/UseCases";
 function App() {
   return (
     <div className="min-h-screen dark:bg-gray-900">
-      <NavBar />
+      <NavBar
+        logo={<span className="font-semibold">SLING IT</span>}
+        links={[
+          { label: "Features", href: "#features" },
+          { label: "Pricing", href: "#pricing" },
+          { label: "Docs", href: "#docs" },
+          { label: "Blog", href: "#blog" },
+        ]}
+        cta={{ label: "Get Started", href: "#get-started" }}
+      />
       <Hero
         eyebrow="NEW"
         title="Manage your recipes faster while slinging drinks! "
