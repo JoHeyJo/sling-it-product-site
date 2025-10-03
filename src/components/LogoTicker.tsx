@@ -1,16 +1,28 @@
-import { memo } from "react";
 import Marquee from "react-fast-marquee";
+import { useMemo } from "react";
 
 type Logo = { name: string; url: string };
 
-function LogoTicker({ speed = 30 }: { logos?: Logo[]; speed?: number }) {
-  // Duplicate the list to fill in space for endless loop
-  // const items = logos;
+function LogoTicker({
+  logos = [] as Logo[],
+  speed = 30,
+}: {
+  logos?: Logo[];
+  speed?: number;
+}) {
 
-  const MarqueeContent = memo(() => {
-    // Your complex content here
-    return <div>...</div>;
-  });
+  const items = logos.map((logo) => (
+            <div className="flex h-14 min-w-40 mx-6 items-center justify-center rounded-xl border border-dashed border-gray-200 px-4 dark:border-white/10">
+              <img
+                key={logo.name}
+                src={logo.url}
+                alt={logo.name}
+                className="h-8 w-auto opacity-70"
+              />
+            </div>
+          ))
+
+const doubled = useMemo(() => items.concat(items), [items]);
 
   return (
     <div className="relative mx-auto mt-14 max-w-7xl">
@@ -28,34 +40,11 @@ function LogoTicker({ speed = 30 }: { logos?: Logo[]; speed?: number }) {
           className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent dark:from-gray-900"
         />
         {/* Track */}
-        <Marquee pauseOnHover gradient={false} speed={speed}>
-          <MarqueeContent />
-          {/* "hello" */}
-          {/* <div className="flex h-14 min-w-40 mx-6 items-center justify-center rounded-xl border border-dashed border-gray-200 px-4 dark:border-white/10">
-            <img
-              key={''}
-              src={''}
-              alt={"Room 389"}
-              className="h-8 w-auto opacity-70"
-            />
-          </div> */}
+        <Marquee pauseOnHover gradient={false} speed={0}>
+          {doubled}
         </Marquee>
       </div>
     </div>
   );
 }
 export default LogoTicker;
-[
-  {
-    name: "Room 389",
-    url: "https://dummyimage.com/160x32/000/fff&text=Acme",
-  },
-  {
-    name: "MadOak",
-    url: "https://dum myimage.com/160x32/000/fff&text=Piper",
-  },
-  {
-    name: "Globex",
-    url: "https://dummyimage.com/160x32/000/fff&text=Globex",
-  },
-];

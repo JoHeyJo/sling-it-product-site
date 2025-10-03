@@ -1,5 +1,4 @@
 import LogoTicker from "./LogoTicker";
-import Marquee from "./LogoTicker";
 
 /**
  * Hero (Responsive)
@@ -169,10 +168,7 @@ export default function Hero({
         </div>
 
         {/* Logo ticker */}
-        <Marquee>
-        <span className="text-xl font-bold mr-8">This is a scrolling message!</span>
-        <span className="text-xl font-bold mr-8">Another message follows.</span>
-      </Marquee>
+        {logos && logos.length > 0 && <LogoTicker logos={logos} />}
       </div>
     </section>
   );
