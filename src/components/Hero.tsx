@@ -9,21 +9,6 @@ import LogoTicker from "./LogoTicker";
  * - Accessible: semantic headings, ARIA labels, focus-visible styles
  * - CLS-safe: fixed aspect ratio for media to prevent layout shift
  * - Dark-mode ready: uses Tailwind dark: tokens
- *
- * Usage:
- * <Hero
- *   eyebrow="NEW"
- *   title="Ship product pages 10× faster"
- *   subtitle="A React + Tailwind block library designed for speed, a11y, and polish."
- *   primaryCta={{ label: "Get Started", href: "#get-started" }}
- *   secondaryCta={{ label: "View Docs", href: "#docs" }}
- *   screenshotUrl="/images/dashboard.png"
- *   stats={[{ label: "Teams", value: "3k+" }, { label: "Uptime", value: "99.99%" }]}
- *   logos={[
- *     { name: "Acme", url: "/logos/acme.svg" },
- *     { name: "Piper", url: "/logos/piper.svg" },
- *   ]}
- * />
  */
 
 export type HeroProps = {
@@ -116,22 +101,6 @@ export default function Hero({
                 )}
               </div>
             )}
-
-            {/* Stats */}
-            {/* {stats && stats.length > 0 && (
-              <dl className="mt-8 grid grid-cols-2 gap-6 sm:max-w-md">
-                {stats.map((s) => (
-                  <div key={s.label} className="">
-                    <dt className="text-sm text-gray-600 dark:text-gray-400">
-                      {s.label}
-                    </dt>
-                    <dd className="text-2xl font-semibold text-gray-900 dark:text-white">
-                      {s.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            )} */}
           </div>
 
           {/* Media column */}

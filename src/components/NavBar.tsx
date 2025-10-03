@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ToggleColorScheme from "./ToggleTheme";
 
 type NavLink = { label: string; href: string };
 type NavBarProps = {
@@ -53,8 +54,11 @@ function NavBar({
             ))}
           </nav>
 
-          {/* Right: CTA + Mobile toggle */}
+          {/* Right:Color Scheme +  CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
+            <div>
+              <ToggleColorScheme />
+            </div>
             <a
               href={cta.href}
               className={`hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition shadow-sm ring-1 ring-transparent
