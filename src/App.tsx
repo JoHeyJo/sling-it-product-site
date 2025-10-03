@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import ProblemSolution from "./sections/ProblemSolution";
 import Features from "./sections/Features";
 import UseCases from "./sections/UseCases";
-import FAQ from "./sections/FAQ";
 
 function App() {
   return (

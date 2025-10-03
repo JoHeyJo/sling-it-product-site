@@ -1,6 +1,10 @@
 export default function ProblemSolution() {
   return (
-    <section id="problem" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <section
+      id="problem"
+      className="mx-auto max-w-7xl px-6 py-16 bg-gradient-to-br
+             dark:from-gray-900/90 dark:to-gray-800/80 lg:px-8"
+    >
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
