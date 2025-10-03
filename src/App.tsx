@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProblemSolution from "./sections/ProblemSolution";
 import Features from "./sections/Features";
+import UseCases from "./sections/UseCases";
+import FAQ from "./sections/FAQ";
 
 function App() {
   return (
@@ -37,8 +39,9 @@ function App() {
           },
         ]}
       />
-      <ProblemSolution />
       <Features />
+      <ProblemSolution />
+      <UseCases />
       <Footer />
     </div>
   );
