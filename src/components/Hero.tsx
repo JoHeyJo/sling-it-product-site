@@ -37,7 +37,9 @@ export default function Hero({
   className = "",
 }: HeroProps) {
   return (
-    <section className={`relative isolate overflow-hidden ${className}`}>
+    <section
+      className={`relative2 min-h-screen isolate overflow-hidden ${className}`}
+    >
       {/* Decorative gradient background */}
       <div
         aria-hidden
@@ -48,7 +50,7 @@ export default function Hero({
           // from-indigo-300 via-sky-300 to-emerald-300 blur-3xl
           // left-1/2 top-[-10%] h-[60rem] w-[120rem] -translate-x-1/2
           // bg-gradient-to-tr dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40
-          // className="absolute "
+          // className="absolute left-1/2 top-[-10%] h-screen w-[120rem] -translate-x-1/2 bg-gradient-to-tr from-indigo-300 via-sky-300 to-emerald-300 blur-3xl dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40"
         />
       </div>
       <div
