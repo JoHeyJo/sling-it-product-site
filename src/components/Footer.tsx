@@ -27,7 +27,7 @@ export default function Footer() {
               href="#"
               className="inline-flex items-center gap-2 text-gray-900 dark:text-gray-100"
             >
-              <span className="inline-block h-6 w-6 rounded bg-indigo-600"></span>
+              <span className="inline-block h-6 w-6 rounded bg-blue-900"></span>
               <span className="text-base font-semibold">YourLogo</span>
             </a>
             <p className="text-sm text-gray-600 dark:text-gray-400">

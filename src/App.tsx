@@ -9,7 +9,9 @@ function App() {
   return (
     <div
       className="min-h-screen dark:bg-gray-900 
-    left-1/2 top-[-10%] bg-gradient-to-tr from-indigo-300 via-sky-300 to-emerald-300 dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40"
+    left-1/2 top-[-10%] 
+    bg-gradient-to-tr 
+    from-indigo-300 via-sky-300 to-emerald-300 dark:from-indigo-800/40 dark:via-sky-800/40 dark:to-emerald-800/40"
     >
       <NavBar
         logo={<span className="font-semibold">SLING IT</span>}

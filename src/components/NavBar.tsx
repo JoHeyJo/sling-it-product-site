@@ -8,11 +8,7 @@ type NavBarProps = {
   cta?: { label: string; href: string };
 };
 
-function NavBar({
-  logo,
-  links,
-  cta,
-}: NavBarProps) {
+function NavBar({ logo, links, cta }: NavBarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,8 +25,8 @@ function NavBar({
     ? "bg-white/80 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
     : "bg-transparent";
   const linkBase = scrolled
-    ? "text-gray-700 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white"
-    : "text-white/90 hover:text-white drop-shadow";
+    ? "text-gray-700 hover:text-gray-300 dark:text-gray-200 dark:hover:text-blue-300"
+    : "text-gray-900 hover:text-gray-500 dark:text-white/90 dark:hover:text-blue-300";
 
   return (
     <header className={`${shell}`}>
@@ -47,7 +43,11 @@ function NavBar({
               <a
                 key={l.label}
                 href={l.href}
-                className={`text-sm font-medium ${linkBase}`}
+                className={`px-3 py-2 text-sm font-medium
+              bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600
+              bg-clip-text transition-colors duration-300
+              ${linkBase} 
+              hover:text-transparent`}
               >
                 {l.label}
               </a>
@@ -64,8 +64,8 @@ function NavBar({
               className={`hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition shadow-sm ring-1 ring-transparent
                 ${
                   scrolled
-                    ? "bg-indigo-600 text-white hover:brightness-110 dark:bg-indigo-500"
-                    : "bg-white/10 text-white hover:bg-white/20"
+                    ? "bg-blue-700 text-white hover:bg-blue-800 dark:bg-blue-900 dark:hover:bg-blue-800"
+                    : "bg-blue-700 text-white shadow-md hover:bg-blue-800 dark:bg-blue-900 dark:hover:bg-blue-800"
                 }`}
             >
               {cta.label}
@@ -100,7 +100,8 @@ function NavBar({
         {open && (
           <div
             className="md:hidden border-t border-black/5 dark:border-white/10 
-               bg-white/70 dark:bg-gray-900/80 backdrop-blur-md">
+               bg-white/70 dark:bg-gray-900/80 backdrop-blur-md"
+          >
             <nav className="px-2 py-3">
               {links.map((l) => (
                 <a
@@ -114,7 +115,7 @@ function NavBar({
               ))}
               <a
                 href={cta.href}
-                className="mt-2 block rounded-xl bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white dark:bg-indigo-500"
+                className="mt-2 block rounded-xl bg-blue-900 px-3 py-2 text-center text-sm font-semibold text-white dark:bg-indigo-500"
                 onClick={() => setOpen(false)}
               >
                 {cta.label}
@@ -127,4 +128,4 @@ function NavBar({
   );
 }
 
-export default NavBar
+export default NavBar;

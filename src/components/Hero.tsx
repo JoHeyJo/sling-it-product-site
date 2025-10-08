@@ -77,7 +77,7 @@ export default function Hero({
                 {primaryCta && (
                   <a
                     href={primaryCta.href}
-                    className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-transparent transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 bg-indigo-600 dark:bg-indigo-500"
+                    className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-transparent transition hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 bg-blue-700 dark:bg-blue-900"
                     aria-label={primaryCta.label}
                   >
                     {primaryCta.label}
