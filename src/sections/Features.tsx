@@ -3,12 +3,12 @@ import { features } from "../data/content";
 export default function Features() {
   return (
     <section
-      id="features"
+      id="Features"
       className="mx-auto max-w-7xl px-6 py-16 lg:px-8 
-            bg-gradient-to-br from-gray-50/60 to-gray-100/80
             bg-gradient-to-tr
+            from-white/80 to-gray-50/60 
             dark:from-gray-900/90 dark:to-gray-800/80
-             backdrop-blur-sm"
+            backdrop-blur-sm"
     >
       <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">

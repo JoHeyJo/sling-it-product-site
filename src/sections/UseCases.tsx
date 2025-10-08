@@ -4,7 +4,9 @@ export default function UseCases() {
   return (
     <section
       id="use-cases"
-      className="mx-auto max-w-7xl bg-gradient-to-tr
+      className="mx-auto max-w-7xl 
+      bg-gradient-to-tr
+      from-white/80 to-gray-50/60 
             dark:from-gray-900/90 dark:to-gray-800/80 px-6 py-16 lg:px-8"
     >
       <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
