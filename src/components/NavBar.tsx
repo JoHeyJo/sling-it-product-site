@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ToggleColorScheme from "./ToggleTheme";
+import ToggleThemeSwitch from "./ToggleTheme";
 
 type NavLink = { label: string; href: string };
 type NavBarProps = {
@@ -57,7 +57,7 @@ function NavBar({ logo, links, cta }: NavBarProps) {
           {/* Right:Color Scheme +  CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
             <div>
-              <ToggleColorScheme />
+              <ToggleThemeSwitch />
             </div>
             <a
               href={cta.href}
