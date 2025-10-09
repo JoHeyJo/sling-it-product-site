@@ -46,11 +46,23 @@ export default function Hero({
       </div>
       <div
         id="Hero-foreground"
-        className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
+        className="
+        relative
+             mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
              bg-gradient-to-br
+             backdrop-blur-sm
+
+             /* Border effect*/
+             rounded-2xl shadow-lg 
+             z-0
+
+            /* Light mode styles */
              from-stone-200 to-gray-50/60 
-             backdrop-blur-sm text-gray-900 
+            text-gray-900 
+
+             /* Dark mode overrides */
              dark:from-gray-900/90 dark:to-gray-800/80
+            
              "
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
