@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ToggleThemeSwitch from "./ToggleTheme";
+import ToggleThemeSwitch from "./ToggleThemeSwtich";
 
 type NavLink = { label: string; href: string };
 type NavBarProps = {
