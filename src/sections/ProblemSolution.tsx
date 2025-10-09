@@ -8,7 +8,12 @@ export default function ProblemSolution() {
             
             from-stone-200 to-gray-50/60
             rounded-2xl shadow-sm 
-            ring-1 ring-slate-200/70 p-8 
+            
+              -mt-px border-x border-t border-slate-200/70 
+                z-[-2px]
+            
+            p-8 
+
             dark:from-gray-900/90 dark:to-gray-800/80 lg:px-8
             "
     >

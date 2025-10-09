@@ -10,7 +10,10 @@ export default function Features() {
 
   /* Border effect*/
   rounded-2xl shadow-lg 
-  outline outline-1 outline-slate-200/70 p-8 
+  p-8 
+  -mt-px border-x border-t border-slate-200/70 
+  z-[-1px]
+  backdrop-blur-sm
 
   /* Light mode styles */
   from-stone-200 to-gray-50/60
