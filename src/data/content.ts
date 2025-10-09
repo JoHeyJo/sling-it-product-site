@@ -1,8 +1,8 @@
 export const features = [
   {
     icon: "🚀",
-    title: "Blazing setup",
-    blurb: "Start shipping in minutes with sane defaults.",
+    title: "Intuitive design",
+    blurb: "Add recipes without the need for a tutorial.",
   },
   {
     icon: "🎨",
@@ -12,7 +12,7 @@ export const features = [
   {
     icon: "🔌",
     title: "Integrations",
-    blurb: "Hook into APIs and analytics in one place.",
+    blurb: "Easily share recipes with friends and co-workers",
   },
   {
     icon: "🛡️",

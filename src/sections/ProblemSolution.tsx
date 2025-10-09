@@ -4,7 +4,7 @@ export default function ProblemSolution() {
       id="problem"
       className="mx-auto max-w-7xl px-6 py-16 
               bg-gradient-to-br
-              from-white/80 to-gray-50/60 
+            from-stone-200 to-gray-50/60
              dark:from-gray-900/90 dark:to-gray-800/80 lg:px-8"
     >
       <div className="grid gap-8 lg:grid-cols-2">

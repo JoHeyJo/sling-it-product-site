@@ -36,7 +36,7 @@ export default function Hero({
   logos,
 }: HeroProps) {
   return (
-    <section className="relative2 isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden">
       {/* Decorative gradient background */}
       <div
         aria-hidden
@@ -48,9 +48,10 @@ export default function Hero({
         id="Hero-foreground"
         className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
              bg-gradient-to-br
-             from-white/80 to-gray-50/60 
+             from-stone-200 to-gray-50/60 
              backdrop-blur-sm text-gray-900 
-             dark:from-gray-900/90 dark:to-gray-800/80"
+             dark:from-gray-900/90 dark:to-gray-800/80
+             "
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}
