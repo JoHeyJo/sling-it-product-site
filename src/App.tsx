@@ -44,7 +44,7 @@ function App() {
           },
           {
             name: "MadOak",
-            url: "https://dum myimage.com/160x32/000/fff&text=Piper",
+            url: "https://dummyimage.com/160x32/000/fff&text=Piper",
           },
           {
             name: "Globex",
