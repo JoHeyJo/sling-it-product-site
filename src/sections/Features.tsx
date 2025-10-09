@@ -9,15 +9,22 @@ export default function Features() {
 
   /* Light mode styles */
   bg-gradient-to-br
-             from-stone-200 to-gray-50/60
-  rounded-2xl shadow-sm ring-1 ring-slate-200/70 p-8 
-  bg-gradient-to-tr backdrop-blur-sm
+  from-stone-200 to-gray-50/60
+  rounded-2xl shadow-lg 
+  border border-1 
+  rounded-xl
+  ring-slate-200/70 p-8 
+  bg-gradient-to-tr 
+  backdrop-blur-sm
 
   /* Dark mode overrides */
-  dark:bg-transparent dark:rounded-none 
+  dark:bg-transparent 
+  dark:border-b-0
+  border-t border-l border-r border-b-0
+  border-l-slate-200 border-r-slate-200
+  border-t-slate-400/10
   dark:ring-0 dark:shadow-none
   dark:from-gray-900/90 dark:to-gray-800/80
-  shadow-lg
 "
     >
       <div
