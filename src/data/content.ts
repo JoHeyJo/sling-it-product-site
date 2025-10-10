@@ -2,7 +2,7 @@ export const features = [
   {
     icon: "🚀",
     title: "Intuitive design",
-    blurb: "Add recipes without the need for a tutorial.",
+    blurb: "Simplify creating and managing recipes",
   },
   {
     icon: "🎨",

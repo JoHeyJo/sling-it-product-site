@@ -19,12 +19,13 @@ export default function ProblemSolution() {
           className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
         >
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-            The problem
+            Intuitive Design
           </h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            <li>Weeks lost wiring basic pages and styles.</li>
-            <li>Inconsistent a11y and mobile behavior.</li>
-            <li>Hard to keep branding consistent across sections.</li>
+            <li>Created for bartenders on the job.</li>
+            <li>Ready to use out of the box - no experience necessary.</li>
+            <li>Quickly create, view, share recipes.</li>
+            <li>Think: mixing with once .</li>
           </ul>
         </div>
         <div
