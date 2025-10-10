@@ -47,11 +47,23 @@ export default function Hero({
       <div
         id="Hero-foreground"
         className="
-relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8
-rounded-2xl shadow-lg z-30
-bg-gradient-to-br from-stone-200/60 to-gray-50/20
-dark:from-gray-900/60 dark:to-gray-800/40
-"
+  
+             mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
+             bg-gradient-to-br
+             backdrop-blur-sm
+
+             /* Border effect*/
+             rounded-2xl shadow-lg 
+             z-30
+
+            /* Light mode styles */
+             from-stone-200/70 to-gray-50/60 
+            text-gray-900 
+
+             /* Dark mode overrides */
+             dark:from-gray-900/90 dark:to-gray-800/80
+            
+             "
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}

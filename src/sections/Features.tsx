@@ -4,12 +4,23 @@ export default function Features() {
   return (
     <section
       id="Features"
-      className=" absolute
-mx-auto max-w-7xl px-6 py-16 lg:px-8
-rounded-2xl shadow-lg z-20
-bg-gradient-to-tr from-stone-200/60 to-gray-50/20
-dark:from-gray-900/60 dark:to-gray-800/40
--mt-px border-t border-x border-slate-200/70
+      className="
+  mx-auto max-w-7xl px-6 py-16 lg:px-8
+  bg-gradient-to-tr 
+
+  /* Border effect*/
+  rounded-2xl shadow-lg 
+  p-8 
+  bg-translucent
+  -mt-px border-x border-t border-slate-200/70 
+  z-20
+
+  /* Light mode styles */
+  from-stone-200/70 to-gray-50/60
+  
+  /* Dark mode overrides */
+  dark:bg-transparent 
+  dark:from-gray-900/90 dark:to-gray-800/80
 "
     >
       <div

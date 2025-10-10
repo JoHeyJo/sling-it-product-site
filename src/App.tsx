@@ -24,7 +24,7 @@ function App() {
         ]}
         cta={{ label: "Get Started", href: "#get-started" }}
       />
-      <div className="relative">
+      <section className="Product-Sections">
         <Hero
           eyebrow="NEW"
           title="Manage your recipes faster while slinging drinks! "
@@ -58,7 +58,7 @@ function App() {
         <ProblemSolution />
         <UseCases />
         <Footer />
-      </div>
+      </section>
     </div>
   );
 }
