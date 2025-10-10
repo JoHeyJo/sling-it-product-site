@@ -1,5 +1,6 @@
 import { useCases } from "../data/content";
 import {
+  bgGradient,
   cardBorder,
   cardDimensions,
   darkBgGradient,
@@ -11,7 +12,7 @@ export default function UseCases() {
     <section
       id="use-cases"
       className={`relative
-        ${cardDimensions} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr `}
+        ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr `}
     >
       <div
         id="edge-blur-top"

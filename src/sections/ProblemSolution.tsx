@@ -1,11 +1,11 @@
-import { cardBorder, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
+import { bgGradient, cardBorder, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
 
 export default function ProblemSolution() {
   return (
     <section
       id="problem"
       className={`relative
-            ${cardDimensions} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
+            ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
     >
       <div
         id="edge-blur-top"

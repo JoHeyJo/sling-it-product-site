@@ -1,12 +1,12 @@
 import { features } from "../data/content";
-import { cardBorder, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
+import { bgGradient, cardBorder, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
 
 export default function Features() {
   return (
     <section
       id="Features"
       className={`
-  ${cardDimensions} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
+  ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
     >
       <div
         className="rounded-2xl 
