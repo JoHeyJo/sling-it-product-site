@@ -4,7 +4,7 @@ export default function ProblemSolution() {
   return (
     <section
       id="problem"
-      className={`relative
+      className={`relative backdrop-blur-sm
             ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
     >
       <div
@@ -14,7 +14,10 @@ export default function ProblemSolution() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
+        <div
+          id="ProblemSolution-problem-container"
+          className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
+        >
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
             The problem
           </h2>
@@ -24,7 +27,10 @@ export default function ProblemSolution() {
             <li>Hard to keep branding consistent across sections.</li>
           </ul>
         </div>
-        <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
+        <div
+          id="ProblemSolution-solution-container"
+          className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
+        >
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
             Our solution
           </h3>

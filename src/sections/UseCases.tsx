@@ -10,8 +10,8 @@ import {
 export default function UseCases() {
   return (
     <section
-      id="use-cases"
-      className={`relative
+      id="UseCases"
+      className={`relative backdrop-blur-sm border-b-0
         ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr `}
     >
       <div
@@ -19,7 +19,10 @@ export default function UseCases() {
         className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 
                 bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
       />
-      <div className="rounded-2x shadow-lg bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
+      <div
+        id="UseCases-inner-container"
+        className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
+      >
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Use cases
         </h2>

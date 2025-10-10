@@ -1,16 +1,23 @@
 import { features } from "../data/content";
-import { bgGradient, cardBorder, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
+import {
+  bgGradient,
+  cardBorder,
+  cardDimensions,
+  darkBgGradient,
+  darkCardBorder,
+} from "../styles";
 
 export default function Features() {
   return (
     <section
       id="Features"
-      className={`
-  ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
+      className={` 
+      ${cardDimensions} ${bgGradient} ${cardBorder} border ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
     >
       <div
+        id="Features-inner-container"
         className="rounded-2xl 
-      shadow-lg
+      shadow-lg 
       p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
       >
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -20,7 +27,7 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="rounded-xl border border-black/5 p-5 dark:border-white/10"
+              className="rounded-xl  border border-black/5 p-5 dark:border-white/10"
             >
               <div className="text-2xl">{f.icon}</div>
               <h3 className="mt-3 text-base font-semibold text-gray-900 dark:text-white">
