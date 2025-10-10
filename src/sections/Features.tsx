@@ -10,10 +10,8 @@ export default function Features() {
 
   /* Border effect*/
   rounded-2xl shadow-lg 
-  p-8 
   bg-translucent
-  -mt-px border border-slate-200/70 
-  z-20
+  -mt-px border border-slate-200/30 
 
   /* Light mode styles */
   from-stone-200/70 to-gray-50/60

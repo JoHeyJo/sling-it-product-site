@@ -3,23 +3,28 @@ export default function ProblemSolution() {
     <section
       id="problem"
       className="relative
-      mx-auto max-w-7xl px-6 py-16 
+            mx-auto max-w-7xl px-6 py-16 
             bg-gradient-to-br
             
-            from-stone-200 to-gray-50/60
-            rounded-2xl shadow-sm 
-            
-              -mt-px border-x  border-slate-200/70 
-                z-[-1px]
-            
-            p-8 
+            /* Border effect*/
+              rounded-2xl shadow-lg 
+              bg-translucent
+              -mt-px border-x border-b border-slate-200/30 
 
-            dark:from-gray-900/90 dark:to-gray-800/80 lg:px-8
+            /* Light mode styles */
+            from-stone-200/70 to-gray-50/60
+                        
+
+            /* Dark mode overrides */
+            dark:bg-transparent 
+            dark:from-gray-900/90 dark:to-gray-800/80
             "
     >
+      
       <div
+        id="edge-blur-top"
         className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 
-                bg-gradient-to-b from-slate-300/40 to-transparent blur-[8px]"
+                bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
       />
 
       <div className="grid gap-8 lg:grid-cols-2">

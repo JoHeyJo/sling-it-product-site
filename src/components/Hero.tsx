@@ -47,14 +47,12 @@ export default function Hero({
       <div
         id="Hero-foreground"
         className="
-  
              mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
              bg-gradient-to-br
              backdrop-blur-sm
 
              /* Border effect*/
-             rounded-2xl shadow-lg 
-             z-30
+             rounded-2xl 
 
             /* Light mode styles */
              from-stone-200/70 to-gray-50/60 

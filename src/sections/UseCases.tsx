@@ -4,22 +4,28 @@ export default function UseCases() {
   return (
     <section
       id="use-cases"
-      className="
+      className="relative
   mx-auto max-w-7xl px-6 py-16 lg:px-8
+  bg-gradient-to-tr 
+
+  /* Border effect*/
+  rounded-2xl shadow-lg 
+  bg-translucent
+  -mt-px border-x border-b border-slate-200/30 
 
   /* Light mode styles */
-  bg-gradient-to-br
-             from-stone-200 to-gray-50/60
-  rounded-2xl shadow-sm ring-1 ring-slate-200/70 p-8 
-  bg-gradient-to-tr backdrop-blur-sm
-
+  from-stone-200/70 to-gray-50/60
+  
   /* Dark mode overrides */
-  dark:bg-transparent dark:rounded-none 
-  dark:ring-0 dark:shadow-none
+  dark:bg-transparent 
   dark:from-gray-900/90 dark:to-gray-800/80
-  shadow-lg
 "
     >
+      <div
+        id="edge-blur-top"
+        className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 
+                bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
+      />
       <div className="rounded-2x shadow-lg bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Use cases
