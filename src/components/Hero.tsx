@@ -1,3 +1,4 @@
+import { bgGradient, cardDimensions, darkBgGradient } from "../styles";
 import LogoTicker from "./LogoTicker";
 
 /**
@@ -46,22 +47,14 @@ export default function Hero({
       </div>
       <div
         id="Hero-foreground"
-        className="
-             mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8 
+        className={`
+             ${cardDimensions} sm:py-20 lg:py-28
              bg-gradient-to-br
              backdrop-blur-sm
-
              /* Border effect*/
-             rounded-2xl 
-
-            /* Light mode styles */
-             from-stone-200/70 to-gray-50/60 
-            text-gray-900 
-
-             /* Dark mode overrides */
-             dark:from-gray-900/90 dark:to-gray-800/80
-            
-             "
+             rounded-2xl shadow-lg 
+             ${bgGradient} ${darkBgGradient}
+             `}
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}

@@ -3,7 +3,7 @@ export default function ProblemSolution() {
     <section
       id="problem"
       className="relative
-            mx-auto max-w-7xl px-6 py-16 
+            mx-auto max-w-7xl px-6 py-16 lg:px-8
             bg-gradient-to-br
             
             /* Border effect*/
@@ -20,7 +20,6 @@ export default function ProblemSolution() {
             dark:from-gray-900/90 dark:to-gray-800/80
             "
     >
-      
       <div
         id="edge-blur-top"
         className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 

@@ -15,12 +15,10 @@ export default function Features() {
 
   /* Light mode styles */
   from-stone-200/70 to-gray-50/60
-  border-gray-900/90
   
   /* Dark mode overrides */
   dark:bg-transparent 
   dark:from-gray-900/90 dark:to-gray-800/80
-  darK:border-slate-200/30
 "
     >
       <div
