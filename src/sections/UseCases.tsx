@@ -1,25 +1,17 @@
 import { useCases } from "../data/content";
+import {
+  cardBorder,
+  cardDimensions,
+  darkBgGradient,
+  darkCardBorder,
+} from "../styles";
 
 export default function UseCases() {
   return (
     <section
       id="use-cases"
-      className="relative
-        mx-auto max-w-7xl px-6 py-16 lg:px-8
-  bg-gradient-to-tr 
-
-  /* Border effect*/
-  rounded-2xl shadow-lg 
-  bg-translucent
-  -mt-px border-x border-b border-slate-200/30 
-
-  /* Light mode styles */
-  from-stone-200/70 to-gray-50/60
-  
-  /* Dark mode overrides */
-  dark:bg-transparent 
-  dark:from-gray-900/90 dark:to-gray-800/80
-"
+      className={`relative
+        ${cardDimensions} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr `}
     >
       <div
         id="edge-blur-top"
