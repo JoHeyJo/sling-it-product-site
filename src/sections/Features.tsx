@@ -12,7 +12,7 @@ export default function Features() {
   rounded-2xl shadow-lg 
   p-8 
   bg-translucent
-  -mt-px border-x border-t border-slate-200/70 
+  -mt-px border border-slate-200/70 
   z-20
 
   /* Light mode styles */

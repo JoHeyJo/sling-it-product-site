@@ -18,8 +18,8 @@ export default function ProblemSolution() {
             "
     >
       <div
-        className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98.1%] -translate-x-1/2 
-                bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
+        className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 
+                bg-gradient-to-b from-slate-300/40 to-transparent blur-[8px]"
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
