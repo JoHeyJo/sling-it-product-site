@@ -17,7 +17,10 @@ export default function ProblemSolution() {
             dark:from-gray-900/90 dark:to-gray-800/80 lg:px-8
             "
     >
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-slate-200/60 to-transparent blur-sm"></div>
+      <div
+        className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98.1%] -translate-x-1/2 
+                bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
+      />
 
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="rounded-2xl bg-white/70 p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10">
