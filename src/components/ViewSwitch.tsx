@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function ToggleThemeSwitch() {
+function ViewSwitch() {
   const [isGrid, setIsGrid] = useState(true);
 
   return (
@@ -55,3 +55,5 @@ export default function ToggleThemeSwitch() {
     </label>
   );
 }
+
+export default ViewSwitch;

@@ -1,10 +1,11 @@
+import { useState } from "react";
 import BlogGrid from "../pages/BlogGrid";
 import BlogVertical from "../pages/BlogVertical";
 
 function Blog(){
-  
-  return <BlogVertical />
-  // return <BlogGrid />
+  const [isGrid, setIsGrid] = useState(true);
+
+  return isGrid ? <BlogGrid /> : <BlogVertical />;
 }
 
 export default Blog

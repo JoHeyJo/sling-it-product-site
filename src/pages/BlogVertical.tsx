@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
+import ViewSwitch from "../components/ViewSwitch";
 
 // -----------------------------
 // Seed Data (edit freely)
@@ -145,7 +146,7 @@ export default function BlogVertical() {
           Shipping notes, behind-the-scenes details, and what’s coming next.
         </p>
       </header>
-
+    <ViewSwitch />
       <div className="mb-10 flex flex-wrap items-center gap-3">
         <div className="inline-flex rounded-xl bg-white/70 p-1 ring-1 ring-black/5 backdrop-blur-sm dark:bg-gray-900/70 dark:ring-white/10">
           {(
