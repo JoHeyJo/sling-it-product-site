@@ -1,0 +1,76 @@
+[
+  {
+    "id": "dark-mode-toggle",
+    "title": "Dark mode class toggle + system preference",
+    "status": "shipped",
+    "date": "2025-10-01",
+    "version": "v0.7.0",
+    "summary": "Site-wide theme switch with graceful transitions, supports manual toggle and prefers-color-scheme (system).",
+    "details": [
+      "Tailwind darkMode=\"class\" with safe-listed tokens for key surfaces",
+      "Tiny inline script sets the theme before paint to prevent flash",
+      "Accessible toggle supports keyboard and reduced-motion users"
+    ],
+    "tags": ["frontend", "ux", "tailwind"],
+    "links": [
+      { "label": "PR #142", "href": "#" },
+      { "label": "Design tokens", "href": "#" }
+    ]
+  },
+  {
+    "id": "logo-ticker",
+    "title": "Infinite logo ticker (no hitch)",
+    "status": "in-progress",
+    "date": "2025-10-08",
+    "version": "v0.7.2",
+    "summary": "Smooth, continuous marquee for partner logos with edge fades and reduced GPU jank.",
+    "details": [
+      "Duplicated-track technique for seamless loop",
+      "Edge gradients and hover-to-pause behavior",
+      "Fine-tuning seam alignment to remove small jump"
+    ],
+    "tags": ["frontend", "animation", "performance"]
+  },
+  {
+    "id": "blurred-line-cards",
+    "title": "Card stack with blurred seam line",
+    "status": "shipped",
+    "date": "2025-10-09",
+    "version": "v0.7.3",
+    "summary": "Layered cards with subtle top blur suggesting stacking; gradient surfaces for light/dark modes.",
+    "details": [
+      "Gradient surface: light → from-stone-200 to gray-50/60; dark → gray-900/90 to gray-800/80",
+      "Skinny top blur line for depth",
+      "Rounded-2xl + shadow-lg consistency across sections"
+    ],
+    "tags": ["frontend", "design"]
+  },
+  {
+    "id": "alb-ec2",
+    "title": "EC2 + ALB deployment hardening",
+    "status": "shipped",
+    "date": "2025-09-28",
+    "version": "infra-2025.9",
+    "summary": "Gunicorn behind NGINX on EC2, fronted by ALB. Health checks stabilized; logs routable for live tail.",
+    "details": [
+      "eventlet worker for Socket.IO; tuned timeouts",
+      "NGINX proxy_* directives refined for SSE/WebSockets",
+      "Systemd service with journalctl live follow documented"
+    ],
+    "tags": ["backend", "infra", "devops"],
+    "links": [{ "label": "Infra notes", "href": "#" }]
+  },
+  {
+    "id": "recipes-model",
+    "title": "Schema: Recipes ↔ Ingredients deep relationships",
+    "status": "planned",
+    "date": "2025-10-20",
+    "summary": "Expose nested access (book.recipes[].ingredients[].item) via SQLAlchemy relationships for fewer queries.",
+    "details": [
+      "Refine association tables and cascade behaviors",
+      "Add unique/partial indexes for role constraints",
+      "Improve serializer for smaller payloads"
+    ],
+    "tags": ["backend", "database"]
+  }
+]
