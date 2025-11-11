@@ -34,8 +34,6 @@ export default function BlogList(props : Props) {
       )
       .sort((a, b) => b.date.localeCompare(a.date));
   }, [features, query, tab]);
-  
-  console.log("In BlogList", props)
 
   return (
     <main className="relative mx-auto max-w-4xl px-4 py-16 sm:py-20 lg:py-28">

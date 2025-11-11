@@ -27,7 +27,6 @@ export default function BlogGrid(props) {
           : true)
     ).sort((a, b) => b.date.localeCompare(a.date));
   }, [FEATURES, query, tab]);
-  console.log("In BlogGrid", props);
 
   return (
     <main className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8">

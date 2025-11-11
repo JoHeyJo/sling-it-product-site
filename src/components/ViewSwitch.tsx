@@ -1,4 +1,5 @@
 
+
 function ViewSwitch({ toggleView, isGrid }) {
   return (
     <label className="relative inline-block">
@@ -41,10 +42,10 @@ function ViewSwitch({ toggleView, isGrid }) {
       {/* Thumb */}
       <span
         className={`absolute left-0.5 top-0.5 w-5 h-5 ${
-          isGrid ? "bg-black" : "bg-white"
+          isGrid ? "bg-white" : "bg-white"
         } rounded-full transition-transform peer-checked:translate-x-6 flex items-center justify-center text-xs`}
       >
-        {isGrid ? "🌙" : "☀️"}
+        {isGrid ? "⊞" : "☰"}
       </span>
 
       {/* SR-only text */}
