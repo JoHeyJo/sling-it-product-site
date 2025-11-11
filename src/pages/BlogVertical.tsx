@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect } from "react";
 import ViewSwitch from "../components/ViewSwitch";
 import StatusBadge from "../components/common/StatusBadge";
 import TagPill from "../components/common/TagPill";
+import NiceDate from "../components/common/NiceDate";
 
 // -----------------------------
 // Seed Data (edit freely)
@@ -27,13 +28,7 @@ type Feature = {
 
 
 
-function NiceDate({ iso }: { iso: string }) {
-  const d = useMemo(() => new Date(iso), [iso]);
-  const fmt = new Intl.DateTimeFormat(undefined, {
-    dateStyle: "medium",
-  }).format(d);
-  return <time dateTime={iso}>{fmt}</time>;
-}
+
 
 // -----------------------------
 // Card
