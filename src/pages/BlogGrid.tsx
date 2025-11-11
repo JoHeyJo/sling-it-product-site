@@ -1,6 +1,7 @@
 import { useMemo, useState,useEffect } from "react";
 import BlogCard from "../components/BlogCard";
 import type { FeatureStatus } from "../types";
+import ViewSwitch from "../components/ViewSwitch";
 
 export default function BlogGrid() {
   const [query, setQuery] = useState("");
@@ -38,7 +39,7 @@ export default function BlogGrid() {
           Shipping notes, behind-the-scenes details, and what’s coming next.
         </p>
       </header>
-
+      <ViewSwitch />
       {/* Controls */}
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <div className="inline-flex rounded-xl bg-white/70 p-1 ring-1 ring-black/5 backdrop-blur-sm dark:bg-gray-900/70 dark:ring-white/10">
