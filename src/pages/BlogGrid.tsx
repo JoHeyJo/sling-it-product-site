@@ -154,7 +154,7 @@ export default function BlogGrid() {
               .includes(query.toLowerCase())
           : true)
     ).sort((a, b) => b.date.localeCompare(a.date));
-  }, [query, tab]);
+  }, [FEATURES, query, tab]);
 
   return (
     <main className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8">
