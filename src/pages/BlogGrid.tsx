@@ -1,24 +1,6 @@
 import { useMemo, useState,useEffect } from "react";
-import StatusBadge from "../components/common/StatusBadge";
-import TagPill from "../components/common/TagPill";
-import NiceDate from "../components/common/NiceDate";
-
-// -----------------------------
-// Seed Data (edit freely)
-// -----------------------------
-export type FeatureStatus = "shipped" | "in-progress" | "planned";
-
-type Feature = {
-  id: string;
-  title: string;
-  status: FeatureStatus;
-  date: string; // ISO like "2025-10-10" (shown with Intl)
-  version?: string; // e.g. "v0.7.3"
-  summary: string;
-  details?: string[]; // bullet points
-  tags?: string[]; // e.g. ["frontend", "infra"]
-  links?: { label: string; href: string }[];
-};
+import BlogCard from "../components/BlogCard";
+import type { FeatureStatus } from "../types";
 
 export default function BlogGrid() {
   const [query, setQuery] = useState("");

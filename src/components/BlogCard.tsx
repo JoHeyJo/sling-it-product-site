@@ -1,3 +1,8 @@
+import StatusBadge from "../components/common/StatusBadge";
+import TagPill from "../components/common/TagPill";
+import NiceDate from "../components/common/NiceDate";
+import type { Feature } from "../types";
+
 function BlogCard({ f }: { f: Feature }) {
   return (
     <article className="relative rounded-2xl shadow-lg bg-gradient-to-br backdrop-blur-sm from-stone-200 to-gray-50/60 text-gray-900 dark:from-gray-900/90 dark:to-gray-800/80 dark:text-gray-100 border border-slate-200/60 dark:border-white/10">
@@ -61,3 +66,5 @@ function BlogCard({ f }: { f: Feature }) {
     </article>
   );
 }
+
+export default BlogCard;
