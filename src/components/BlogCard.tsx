@@ -6,12 +6,6 @@ import type { Feature } from "../types";
 function BlogCard({ f }: { f: Feature }) {
   return (
     <article className="relative rounded-2xl shadow-lg bg-gradient-to-br backdrop-blur-sm from-stone-200 to-gray-50/60 text-gray-900 dark:from-gray-900/90 dark:to-gray-800/80 dark:text-gray-100 border border-slate-200/60 dark:border-white/10">
-      {/* Skinny top blur seam */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-1 w-[77%] -translate-x-1/2 rounded-2xl bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
-      />
-
       <div className="p-6 sm:p-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-lg font-semibold tracking-tight sm:text-xl">
