@@ -3,11 +3,12 @@ import ViewSwitch from "../components/ViewSwitch";
 import ListCard from "../components/ListCard";
 import type { Feature, FeatureStatus } from "../types";
 
-// -----------------------------
-// Seed Data (edit freely)
-// -----------------------------
+type Props = {
+  toggleView: () => void;
+  isGrid: boolean;
+};
 
-export default function BlogList() {
+export default function BlogList(props : Props) {
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState<FeatureStatus | "all">("all");
   const [features, setFeatures] = useState<Feature[]>([]);
@@ -33,6 +34,8 @@ export default function BlogList() {
       )
       .sort((a, b) => b.date.localeCompare(a.date));
   }, [features, query, tab]);
+  
+  console.log("In BlogList", props)
 
   return (
     <main className="relative mx-auto max-w-4xl px-4 py-16 sm:py-20 lg:py-28">
@@ -44,7 +47,7 @@ export default function BlogList() {
           Shipping notes, behind-the-scenes details, and what’s coming next.
         </p>
       </header>
-    <ViewSwitch />
+      <ViewSwitch toggleView={props.toggleView} isGrid={props.isGrid} />
       <div className="mb-10 flex flex-wrap items-center gap-3">
         <div className="inline-flex rounded-xl bg-white/70 p-1 ring-1 ring-black/5 backdrop-blur-sm dark:bg-gray-900/70 dark:ring-white/10">
           {(

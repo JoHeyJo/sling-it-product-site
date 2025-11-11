@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
 
-function ViewSwitch() {
-  const [isGrid, setIsGrid] = useState(true);
-
+function ViewSwitch({ toggleView, isGrid }) {
   return (
     <label className="relative inline-block">
       {/* Hidden checkbox drives peer-based styles */}
@@ -11,7 +8,7 @@ function ViewSwitch() {
         role="switch"
         aria-label="Dark Mode"
         // checked={isDark}
-        onChange={() => setIsGrid(!isGrid)}
+        onChange={() => toggleView()}
         className="peer sr-only"
       />
 

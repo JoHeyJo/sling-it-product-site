@@ -3,7 +3,7 @@ import BlogCard from "../components/BlogCard";
 import type { FeatureStatus } from "../types";
 import ViewSwitch from "../components/ViewSwitch";
 
-export default function BlogGrid() {
+export default function BlogGrid(props) {
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState<FeatureStatus | "all">("all");
   const [FEATURES , setFeatures] = useState([]);
@@ -27,6 +27,7 @@ export default function BlogGrid() {
           : true)
     ).sort((a, b) => b.date.localeCompare(a.date));
   }, [FEATURES, query, tab]);
+  console.log("In BlogGrid", props);
 
   return (
     <main className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-28 lg:px-8">
@@ -39,7 +40,7 @@ export default function BlogGrid() {
           Shipping notes, behind-the-scenes details, and what’s coming next.
         </p>
       </header>
-      <ViewSwitch />
+      <ViewSwitch toggleView={props.toggleView} isGrid={props.isGrid} />
       {/* Controls */}
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <div className="inline-flex rounded-xl bg-white/70 p-1 ring-1 ring-black/5 backdrop-blur-sm dark:bg-gray-900/70 dark:ring-white/10">
