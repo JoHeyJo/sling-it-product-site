@@ -6,7 +6,7 @@ function Blog(){
   const [isGrid, setIsGrid] = useState(true);
 
   function toggleView(){
-    setIsGrid((isGrid) => !isGrid)
+    setIsGrid(!isGrid)
   }
 
   return isGrid ? (

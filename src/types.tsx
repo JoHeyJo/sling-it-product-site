@@ -8,6 +8,7 @@ export type Feature = {
   details?: string[]; // bullet points
   tags?: string[]; // e.g. ["frontend", "infra"]
   links?: { label: string; href: string }[];
+  pullRequest?: string
 };
 
 export type FeatureStatus = "shipped" | "in-progress" | "planned";

@@ -17,7 +17,7 @@ function ListCard({ f }: { f: Feature }) {
                 {f.version}
               </span>
             )}
-            <StatusBadge status={f.status} />
+            <StatusBadge pullRequest={f.pullRequest} status={f.status} />
           </div>
         </div>
         <p className="mt-2 text-sm/6 text-gray-700 dark:text-gray-300">
