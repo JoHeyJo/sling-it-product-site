@@ -17,7 +17,8 @@ function BlogCard({ f }: { f: Feature }) {
                 {f.version}
               </span>
             )}
-            <StatusBadge status={f.status} />
+            <StatusBadge pullRequest={f.pullRequest} status={f.status} />
+            
           </div>
         </div>
 

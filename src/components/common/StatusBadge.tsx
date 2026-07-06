@@ -1,6 +1,14 @@
 export type FeatureStatus = "shipped" | "in-progress" | "planned";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodePullRequest } from "@fortawesome/free-solid-svg-icons";
 
-function StatusBadge({ status }: { status: FeatureStatus }) {
+function StatusBadge({
+  status,
+  pullRequest,
+}: {
+  status: FeatureStatus;
+  pullRequest: string | null
+}) {
   const map: Record<FeatureStatus, string> = {
     shipped:
       "bg-emerald-600/10 text-emerald-700 ring-1 ring-emerald-600/20 dark:text-emerald-300",
@@ -13,15 +21,23 @@ function StatusBadge({ status }: { status: FeatureStatus }) {
     status === "shipped"
       ? "Shipped"
       : status === "in-progress"
-      ? "In progress"
-      : "Planned";
+        ? "In progress"
+        : "Planned";
   return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${map[status]}`}
-    >
-      {status === "shipped" ? "✅" : status === "in-progress" ? "🔧" : "🧭"}
-      {label}
-    </span>
+    <>
+      <span
+        className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${map[status]}`}
+      >
+        {status === "shipped" ? "✅" : status === "in-progress" ? "🔧" : "🧭"}
+        {label}
+      </span>
+
+      {status === "shipped" && (
+        <a href={pullRequest}>
+          <FontAwesomeIcon icon={faCodePullRequest} />
+        </a>
+      )}
+    </>
   );
 }
 
