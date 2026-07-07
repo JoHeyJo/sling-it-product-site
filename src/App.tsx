@@ -14,7 +14,7 @@ function App() {
     dark:from-indigo-800/40 dark:via-sky-800/40"
     >
       <NavBar
-        logo={<a className="font-semibold" href="/">SLING IT</a>}
+        logo={"SLING IT"}
         links={[
           { label: "Features", href: "#features" },
           { label: "Docs", href: "docs" },

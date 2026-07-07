@@ -5,7 +5,7 @@ export default function ProblemSolution() {
     <section
       id="problem"
       className={`relative backdrop-blur-sm
-            ${cardDimensions} ${bgGradient} ${cardBordxwer} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
+            ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
     >
       <div
         id="edge-blur-top"
