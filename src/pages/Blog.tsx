@@ -2,11 +2,17 @@ import { useMemo, useState,useEffect } from "react";
 import BlogCard from "../components/BlogCard";
 import type { FeatureStatus } from "../types";
 import ViewSwitch from "../components/ViewSwitch";
+import ListCard from "../components/ListCard";
 
-export default function BlogGrid(props) {
+export default function Blog() {
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState<FeatureStatus | "all">("all");
   const [FEATURES , setFeatures] = useState([]);
+  const [isGrid, setIsGrid] = useState(true);
+
+    function handleToggleView() {
+      setIsGrid(!isGrid);
+    }
 
   useEffect(() => {
     fetch("/features.json")
@@ -39,7 +45,7 @@ export default function BlogGrid(props) {
           Shipping notes, behind-the-scenes details, and what’s coming next.
         </p>
       </header>
-      <ViewSwitch toggleView={props.toggleView} isGrid={props.isGrid} />
+      <ViewSwitch toggleView={handleToggleView} isGrid={isGrid} />
       {/* Controls */}
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <div className="inline-flex rounded-xl bg-white/70 p-1 ring-1 ring-black/5 backdrop-blur-sm dark:bg-gray-900/70 dark:ring-white/10">
@@ -66,9 +72,9 @@ export default function BlogGrid(props) {
         </div>
 
         <div className="ml-auto flex-1 sm:flex-none">
-          <label className="sr-only" htmlFor="feature-search">
+          {/* <label className="sr-only" htmlFor="feature-search">
             Search features
-          </label>
+          </label> */}
           <div className="relative">
             <input
               id="feature-search"
@@ -77,30 +83,23 @@ export default function BlogGrid(props) {
               placeholder="Search features, tags, notes…"
               className="w-full rounded-xl border border-slate-200/70 bg-white/70 px-3 py-2 text-sm shadow-sm outline-none ring-1 ring-transparent placeholder:text-gray-400 focus:border-slate-300 focus:ring-indigo-500/20 dark:border-white/10 dark:bg-gray-900/70 dark:text-gray-100 dark:placeholder:text-gray-500"
             />
-            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
-              ⌘K
-            </div>
           </div>
         </div>
       </div>
 
       {/* Grid */}
-      <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((f) => (
-          <BlogCard key={f.id} f={f} />
-        ))}
+      <section
+        className={`${isGrid ? "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" : "flex flex-col gap-6"} {
+        }`}
+      >
+        {items.map((f) =>
+          isGrid ? (
+            <BlogCard key={f.id} f={f} />
+          ) : (
+            <ListCard key={f.id} f={f} />
+          ),
+        )}
       </section>
-
-      {/* Footer callout */}
-      <div className="mx-auto mt-12 max-w-3xl text-center text-sm text-gray-600 dark:text-gray-300">
-        Looking for the raw changelog?{" "}
-        <a
-          className="font-medium text-indigo-600 hover:underline dark:text-indigo-300"
-          href="#"
-        >
-          See full release notes →
-        </a>
-      </div>
     </main>
   );
 }
