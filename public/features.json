@@ -12,11 +12,7 @@
       "Tiny inline script sets the theme before paint to prevent flash",
       "Accessible toggle supports keyboard and reduced-motion users"
     ],
-    "tags": ["frontend", "ux", "tailwind"],
-    "links": [
-      { "label": "PR #142", "href": "#" },
-      { "label": "Design tokens", "href": "#" }
-    ]
+    "tags": ["frontend", "ux", "tailwind"]
   },
   {
     "id": "logo-ticker",
@@ -76,6 +72,7 @@
       "Add unique/partial indexes for role constraints",
       "Improve serializer for smaller payloads"
     ],
-    "tags": ["backend", "database"]
+    "tags": ["backend", "database"],
+    "links":[{"label": "Commit", "href": "https://github.com/JoHeyJo/recipe-backend/commit/d1072a4552ba6f0aaad85bbb5c3eaf39ca9c82f7"}]
   }
 ]
