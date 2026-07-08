@@ -23,44 +23,41 @@ export const features = [
 
 export const problemsSolutions = [
   {
-    problem: "Organizing and tracking your recipes",
+    problem: "The problem",
     problems: [
-      "Created for bartenders on the job.",
-      "Ready to use out of the box - no experience necessary.",
-      "Quickly create, view, share recipes.",
+      "Organizing and tracking your recipes",
+      "Multiple recipe books"
     ],
-    solution: "One application, all your recipe books",
-   solutions: []
+    solution: "Solution: One app. All your recipe books",
+    solutions: ["Consolidate recipes across a single or many books"],
   },
   {
-    problem: "Learning to use another application",
+    problem: "The problem",
     problems: [
-      "Created for bartenders on the job.",
-      "Ready to use out of the box - no experience necessary.",
-      "Quickly create, view, share recipes.",
+      "Learning to use another application"
     ],
-    solution: "Intuitive Design",
-   solutions: []
+    solution: "Solution: Intuitive Design",
+    solutions: ["Reads like a book", "Self explanatory controls", "Virtually no set required"],
   },
   {
-    problem: "Sharing and coordinating",
+    problem: "The problem",
     problems: [
-      "Created for bartenders on the job.",
-      "Ready to use out of the box - no experience necessary.",
-      "Quickly create, view, share recipes.",
+      "Sharing and coordinating recipes",
+      "Sharing with multiple people",
+      "Updating others of changes or edits in recipes",
     ],
     solution: "Seamless collaboration",
-   solutions: []
+    solutions: ["Share books and recipes instantly with others","Changes are live keeping recipient up to date"],
   },
   {
-    problem: "Repetitive input",
+    problem: "The problem",
     problems: [
-      "Created for bartenders on the job.",
-      "Ready to use out of the box - no experience necessary.",
-      "Quickly create, view, share recipes.",
+      "Repetitive input.",
+      "Recipes share the same metrics e.g. 1 oz tequila.",
+      "Maintaining standard naming conventions",
     ],
     solution: "Reduce clutter",
-   solutions: []
+    solutions: ["Write it down once - reuse.", "Select created metrics from dropdown or autofill"],
   },
 ];
 

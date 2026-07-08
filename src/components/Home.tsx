@@ -31,7 +31,7 @@ function Home() {
             url: "https://dummyimage.com/160x32/000/fff&text=Piper",
           },
           {
-            name: "Globex",
+            name: "Sable",
             url: "https://dummyimage.com/160x32/000/fff&text=Globex",
           },
         ]}
