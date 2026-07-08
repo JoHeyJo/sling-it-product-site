@@ -21,6 +21,49 @@ export const features = [
   },
 ];
 
+export const problemsSolutions = [
+  {
+    problem: "Organizing and tracking your recipes",
+    problems: [
+      "Created for bartenders on the job.",
+      "Ready to use out of the box - no experience necessary.",
+      "Quickly create, view, share recipes.",
+    ],
+    solution: "One application, all your recipe books",
+   solutions: []
+  },
+  {
+    problem: "Learning to use another application",
+    problems: [
+      "Created for bartenders on the job.",
+      "Ready to use out of the box - no experience necessary.",
+      "Quickly create, view, share recipes.",
+    ],
+    solution: "Intuitive Design",
+   solutions: []
+  },
+  {
+    problem: "Sharing and coordinating",
+    problems: [
+      "Created for bartenders on the job.",
+      "Ready to use out of the box - no experience necessary.",
+      "Quickly create, view, share recipes.",
+    ],
+    solution: "Seamless collaboration",
+   solutions: []
+  },
+  {
+    problem: "Repetitive input",
+    problems: [
+      "Created for bartenders on the job.",
+      "Ready to use out of the box - no experience necessary.",
+      "Quickly create, view, share recipes.",
+    ],
+    solution: "Reduce clutter",
+   solutions: []
+  },
+];
+
 export const benefits = [
   { stat: "10×", label: "Faster launch" },
   { stat: "99.99%", label: "Uptime target" },

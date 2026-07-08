@@ -2,6 +2,7 @@ import ProblemSolution from "../sections/ProblemSolution";
 import Features from "../sections/Features";
 import UseCases from "../sections/UseCases";
 import Hero from "./Hero";
+import { problemsSolutions } from "../data/content";
 
 function Home() {
   return (
@@ -35,9 +36,16 @@ function Home() {
           },
         ]}
       />
-
       <Features />
-      <ProblemSolution />
+      {problemsSolutions.map((data, i) => (
+        <ProblemSolution
+        key={i}
+          problem={data.problem}
+          problems={data.problems}
+          solution={data.solution}
+          solutions={data.solutions}
+        />
+      ))}
       <UseCases />
     </>
   );
