@@ -214,7 +214,7 @@ export default function Documentation() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-stone-100 text-stone-800 transition-colors dark:bg-gray-950 dark:text-stone-200">
+      <div className="min-h-screen text-stone-800 transition-colors dark:text-stone-200">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Header */}
           <header className="mb-10 flex items-end justify-between gap-6">
@@ -231,21 +231,6 @@ export default function Documentation() {
                 opened.
               </p>
             </div>
-
-            <button
-              onClick={() => setDark((v) => !v)}
-              aria-pressed={dark}
-              className="inline-flex items-center gap-2 rounded-full border border-gray-900/20 bg-white/70 px-4 py-2 text-sm font-medium text-stone-700 shadow-sm transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 dark:border-gray-200/20 dark:bg-white/5 dark:text-stone-200 dark:hover:bg-white/10"
-            >
-              {dark ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-              <span className="hidden sm:inline">
-                {dark ? "Light" : "Dark"}
-              </span>
-            </button>
           </header>
 
           {/* Layout row (relative so the brace SVG can overlay the gap) */}
@@ -280,14 +265,14 @@ export default function Documentation() {
                   strokeDasharray={1}
                 />
                 {/* origin dot at the selected directory */}
-                <circle
+                {/* <circle
                   key={`dot-${selectedId}`}
                   className="brace-dot"
                   cx={brace.tipX}
                   cy={brace.tipY}
                   r={3.5}
                   fill={stops.b}
-                />
+                /> */}
               </svg>
             )}
 
