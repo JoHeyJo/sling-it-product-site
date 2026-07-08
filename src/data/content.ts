@@ -1,23 +1,23 @@
 export const features = [
   {
-    icon: "🚀",
+    icon: "📕",
+    title: "One app is all you need",
+    blurb: "All your recipes in one place",
+  },
+  {
+    icon: "🧠",
     title: "Intuitive design",
-    blurb: "Simplify creating and managing recipes",
+    blurb: "Simplifies creating and managing recipes.",
   },
   {
-    icon: "🎨",
-    title: "Polished UI",
-    blurb: "Accessible, responsive, dark-mode ready components.",
-  },
-  {
-    icon: "🔌",
-    title: "Integrations",
+    icon: "🤝",
+    title: "Seamless collaboration",
     blurb: "Easily share recipes with friends and co-workers",
   },
   {
-    icon: "🛡️",
-    title: "Secure by default",
-    blurb: "Best practices baked in from the start.",
+    icon: "🧹",
+    title: "Reduce clutter",
+    blurb: "Write it down once and reuse.",
   },
 ];
 
