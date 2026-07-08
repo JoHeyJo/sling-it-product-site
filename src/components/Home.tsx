@@ -37,9 +37,10 @@ function Home() {
         ]}
       />
       <Features />
-      {problemsSolutions.map((data, i) => (
+      {problemsSolutions.map((data, index) => (
         <ProblemSolution
-        key={i}
+          key={index}
+          id={index}
           problem={data.problem}
           problems={data.problems}
           solution={data.solution}

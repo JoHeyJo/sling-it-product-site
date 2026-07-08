@@ -12,7 +12,7 @@ export default function Features() {
     <section
       id="Features"
       className={` 
-      ${cardDimensions} ${bgGradient} ${cardBorder} border ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
+      ${cardDimensions} ${bgGradient} ${cardBorder} border ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
     >
       <div
         id="Features-inner-container"

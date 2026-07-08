@@ -23,6 +23,7 @@ export const features = [
 
 export const problemsSolutions = [
   {
+    id:1,
     problem: "The problem",
     problems: [
       "Organizing and tracking your recipes",
@@ -32,6 +33,7 @@ export const problemsSolutions = [
     solutions: ["Consolidate recipes across a single or many books"],
   },
   {
+    id:2,
     problem: "The problem",
     problems: [
       "Learning to use another application"
@@ -40,6 +42,7 @@ export const problemsSolutions = [
     solutions: ["Reads like a book", "Self explanatory controls", "Virtually no set required"],
   },
   {
+    id:3,
     problem: "The problem",
     problems: [
       "Sharing and coordinating recipes",
@@ -50,6 +53,7 @@ export const problemsSolutions = [
     solutions: ["Share books and recipes instantly with others","Changes are live keeping recipient up to date"],
   },
   {
+    id:4,
     problem: "The problem",
     problems: [
       "Repetitive input.",

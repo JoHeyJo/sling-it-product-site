@@ -35,8 +35,7 @@ export default function Footer() {
               <span className="text-base font-semibold">YourLogo</span>
             </a>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Build, launch, and scale modern product sites with React +
-              Tailwind.
+              Create, access, and manage large quantities of recipes. Ready to share with anyone and everyone.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a
@@ -142,7 +141,7 @@ export default function Footer() {
         <div className="mt-10 border-t border-black/5 pt-6 dark:border-white/10">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} Your Company. All rights reserved.
+              © {new Date().getFullYear()} Sling It. All rights reserved.
             </p>
             <div className="flex gap-4 text-xs">
               <a

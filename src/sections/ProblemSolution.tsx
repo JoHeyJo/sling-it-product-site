@@ -7,13 +7,20 @@ import {
 } from "../styles";
 
 type ProblemSolutionProps = {
+  id: number;
   problem: string;
   problems: string[];
   solution: string;
   solutions: string[];
 };
 
+function isEven(number: number){
+  console.log(number)
+  return number % 2 === 0;
+}
+
 export default function ProblemSolution({
+  id,
   problem,
   problems,
   solution,
@@ -23,7 +30,7 @@ export default function ProblemSolution({
     <section
       id="problem"
       className={`relative backdrop-blur-sm
-            ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-br`}
+            ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-${isEven(id) ? "br" : "tr"}`}
     >
       <div
         id="edge-blur-top"
@@ -53,7 +60,7 @@ export default function ProblemSolution({
             {solution}
           </h3>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            {solutions.map((solution,i) => (
+            {solutions.map((solution, i) => (
               <li key={i}>{solution}</li>
             ))}
           </ul>
