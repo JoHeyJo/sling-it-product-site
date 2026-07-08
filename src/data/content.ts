@@ -23,26 +23,26 @@ export const features = [
 
 export const problemsSolutions = [
   {
-    id:1,
-    problem: "The problem",
-    problems: [
-      "Organizing and tracking your recipes",
-      "Multiple recipe books"
-    ],
+    problem: "Getting started is easy",
+    problems: ["Organizing and tracking your recipes", "Multiple recipe books"],
     solution: "Solution: One app. All your recipe books",
-    solutions: ["Consolidate recipes across a single or many books"],
-  },
-  {
-    id:2,
-    problem: "The problem",
-    problems: [
-      "Learning to use another application"
+    solutions: [
+      "Consolidate all your recipes in a single recipe book.",
+      "Or manage them across multiple books.",
+      "Create, access, manage.",
     ],
-    solution: "Solution: Intuitive Design",
-    solutions: ["Reads like a book", "Self explanatory controls", "Virtually no set required"],
   },
   {
-    id:3,
+    problem: "Intuitive Design",
+    problems: ["Learning to use another application"],
+    solution: "Solution: Intuitive Design",
+    solutions: [
+      "Reads like a book",
+      "",
+      "Virtually no set required",
+    ],
+  },
+  {
     problem: "The problem",
     problems: [
       "Sharing and coordinating recipes",
@@ -50,10 +50,12 @@ export const problemsSolutions = [
       "Updating others of changes or edits in recipes",
     ],
     solution: "Seamless collaboration",
-    solutions: ["Share books and recipes instantly with others","Changes are live keeping recipient up to date"],
+    solutions: [
+      "Share books and recipes instantly with others",
+      "Changes are live keeping recipient up to date",
+    ],
   },
   {
-    id:4,
     problem: "The problem",
     problems: [
       "Repetitive input.",
@@ -61,7 +63,10 @@ export const problemsSolutions = [
       "Maintaining standard naming conventions",
     ],
     solution: "Reduce clutter",
-    solutions: ["Write it down once - reuse.", "Select created metrics from dropdown or autofill"],
+    solutions: [
+      "Write it down once - reuse.",
+      "Select created metrics from dropdown or autofill",
+    ],
   },
 ];
 

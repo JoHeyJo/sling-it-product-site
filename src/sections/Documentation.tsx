@@ -5,9 +5,7 @@ import {
   ChevronRight,
   Hash,
 } from "lucide-react";
-import { directories
-
- } from "../data/directories";
+import { directories } from "../data/directories";
 
  import { cardBorder, bgGradient } from "../styles";
 /* ------------------------------------------------------------------ *
