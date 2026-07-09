@@ -44,8 +44,8 @@ function Home() {
           leftCard={data.leftCard}
           leftInfo={data.leftInfo}
           leftLink={data.leftLink}
-          rightCard={data.leftCard}
-          rightInfo={data.leftInfo}
+          rightCard={data.rightCard}
+          rightInfo={data.rightInfo}
           rightLink={data.rightLink}
         />
       ))}

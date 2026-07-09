@@ -25,24 +25,26 @@ export const information = [
   {
     leftCard: "Getting started is easy",
     leftInfo: [
-      "One app all your recipes",
+      "One app all, your recipes",
       "Reads like a book",
       "Create, access, manage",
     ],
     leftLink: { label: "Get Started", href: "/", isDocsLink: false },
-    rightCard: "Solution: One app. All your recipe books",
+
+    rightCard: "Manage your recipe book ",
     rightInfo: [
-      "Consolidate all your recipes in a single recipe book",
-      "Or manage them multiple books",
-      "Create, access, manage, recipes across multiple recipe books",
+      "Create books, create recipes",
+      "CAtegorize recipes ",
+      "Easily selected previously add inventory",
     ],
     rightLink: { label: "docs", href: "", isDocsLink: true },
   },
   {
-    leftCard: "One app, all your recipes",
-    leftInfo: ["Organizing and tracking your recipes", "Multiple recipe books"],
+    leftCard: "Share with friends, share with bartenders",
+    leftInfo: ["Share your books", "Or just share recipes"],
     leftLink: { label: "docs", href: "", isDocsLink: true },
-    rightCard: "Solution: One app. All your recipe books",
+
+    rightCard: "Search the internet for your recipe",
     rightInfo: [
       "Consolidate all your recipes in a single recipe book",
       "Or manage them multiple books",
