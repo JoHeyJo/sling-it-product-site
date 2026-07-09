@@ -8,6 +8,7 @@ import {
 import { directories } from "../data/directories";
 
  import { cardBorder, bgGradient } from "../styles";
+import { MonoPanel } from "../components/MonoPanel";
 /* ------------------------------------------------------------------ *
  * Palette (from the provided design tokens).
  * `bg-translucent` isn't a stock Tailwind class, so the gradient is
@@ -260,9 +261,10 @@ export default function Documentation() {
                           {s.body}
                         </p>
                         {s.code && (
-                          <pre className="mt-3 overflow-x-auto rounded-xl border border-gray-900/15 bg-stone-900 p-4 font-mono text-xs leading-relaxed text-stone-100 shadow-inner dark:border-white/10 dark:bg-black/40">
-                            <code>{s.code}</code>
-                          </pre>
+                          // <pre className="mt-3 overflow-x-auto rounded-xl border border-gray-900/15 bg-stone-900 p-4 font-mono text-xs leading-relaxed text-stone-100 shadow-inner dark:border-white/10 dark:bg-black/40">
+                          //   <code>{s.code}</code>
+                          // </pre>
+                          <MonoPanel>{s.code}</MonoPanel>
                         )}
                       </article>
                     ))}
