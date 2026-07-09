@@ -23,23 +23,33 @@ export const features = [
 
 export const information = [
   {
-    leftCard: "One app, all your recipes",
+    leftCard: "Getting started is easy",
     leftInfo: [
-      "Organizing and tracking your recipes",
-      "Multiple recipe books"
+      "One app all your recipes",
+      "Reads like a book",
+      "Create, access, manage",
     ],
+    leftLink: { label: "Get Started", href: "/", isDocsLink: false },
     rightCard: "Solution: One app. All your recipe books",
-    rightInfo: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
+    rightInfo: [
+      "Consolidate all your recipes in a single recipe book",
+      "Or manage them multiple books",
+      "Create, access, manage, recipes across multiple recipe books",
+    ],
+    rightLink: { label: "docs", href: "", isDocsLink: true },
   },
   {
     leftCard: "One app, all your recipes",
-    leftInfo: [
-      "Organizing and tracking your recipes",
-      "Multiple recipe books"
-    ],
+    leftInfo: ["Organizing and tracking your recipes", "Multiple recipe books"],
+    leftLink: { label: "docs", href: "", isDocsLink: true },
     rightCard: "Solution: One app. All your recipe books",
-    rightInfo: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
-  }
+    rightInfo: [
+      "Consolidate all your recipes in a single recipe book",
+      "Or manage them multiple books",
+      "Create, access, manage, recipes across multiple recipe books",
+    ],
+    rightLink: { label: "docs", href: "", isDocsLink: true },
+  },
 ];
 
 export const benefits = [

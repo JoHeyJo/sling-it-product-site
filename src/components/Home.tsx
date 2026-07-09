@@ -43,8 +43,10 @@ function Home() {
           id={index}
           leftCard={data.leftCard}
           leftInfo={data.leftInfo}
+          leftLink={data.leftLink}
           rightCard={data.leftCard}
           rightInfo={data.leftInfo}
+          rightLink={data.rightLink}
         />
       ))}
       <UseCases />
@@ -53,3 +55,5 @@ function Home() {
 }
 
 export default Home;
+
+

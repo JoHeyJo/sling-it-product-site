@@ -10,8 +10,10 @@ type CardGrid = {
   id: number;
   leftCard: string;
   leftInfo: string[];
+  leftLink: { label: string; href: string };
   rightCard: string;
   rightInfo: string[];
+  rightLink: { label: string; href: string };
 };
 
 function isEven(number: number) {
@@ -23,9 +25,37 @@ export default function CardGrid({
   id,
   leftCard,
   leftInfo,
+  leftLink,
   rightCard,
   rightInfo,
+  rightLink,
 }: CardGrid) {
+
+function cta(link){
+
+
+  return (
+    <div className="mt-6 justify-end flex gap-3">
+      {link.isDocsLink
+      ?
+      <a
+        href="#docs"
+        className="rounded-xl px-4 py-2 text-sm font-semibold ring-1 hover:bg-gray-50 dark:hover:bg-white/5 ring-gray-300 dark:text-white dark:ring-gray-700/80"
+      >
+        Docs
+      </a>
+      :
+      <a
+        href="#get-started"
+        className="rounded-xl bg-blue-700 px-4 py-2 text-sm font-semibold hover:bg-blue-800 text-white dark:bg-blue-900"
+      >
+        Get started
+      </a>
+      }
+    </div>
+  );
+}
+
   return (
     <section
       id="leftCard"
@@ -47,10 +77,11 @@ export default function CardGrid({
             {leftCard}
           </h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            {leftInfo.map((leftCard, i) => (
-              <li key={i}>{leftCard}</li>
+            {leftInfo.map((card, i) => (
+              <li key={i}>{card}</li>
             ))}
           </ul>
+          {cta(leftLink)}
         </div>
         <div
           id="CardGrid-rightCard-container"
@@ -60,24 +91,11 @@ export default function CardGrid({
             {rightCard}
           </h3>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            {rightInfo.map((rightCard, i) => (
-              <li key={i}>{rightCard}</li>
+            {rightInfo.map((card, i) => (
+              <li key={i}>{card}</li>
             ))}
           </ul>
-          {/* <div className="mt-6 flex gap-3">
-            <a
-              href="#get-started"
-              className="rounded-xl bg-blue-700 px-4 py-2 text-sm font-semibold hover:bg-blue-800 text-white dark:bg-blue-900"
-            >
-              Get started
-            </a>
-            <a
-              href="#features"
-              className="rounded-xl px-4 py-2 text-sm font-semibold ring-1 hover:bg-gray-50 dark:hover:bg-white/5 ring-gray-300 dark:text-white dark:ring-gray-700/80"
-            >
-              See features
-            </a>
-          </div> */}
+          {cta(rightLink)}
         </div>
       </div>
     </section>
