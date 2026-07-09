@@ -1,8 +1,9 @@
-import ProblemSolution from "../sections/ProblemSolution";
+import CardGrid from "../sections/CardGrid";
 import Features from "../sections/Features";
 import UseCases from "../sections/UseCases";
 import Hero from "./Hero";
-import { problemsSolutions } from "../data/content";
+import { infoCards } from "../data/content";
+
 
 function Home() {
   return (
@@ -37,14 +38,12 @@ function Home() {
         ]}
       />
       <Features />
-      {problemsSolutions.map((data, index) => (
-        <ProblemSolution
+      {infoCards.map((data, index) => (
+        <CardGrid
           key={index}
           id={index}
-          problem={data.problem}
-          problems={data.problems}
-          solution={data.solution}
-          solutions={data.solutions}
+          title={data.title}
+          info={data.info}
         />
       ))}
       <UseCases />

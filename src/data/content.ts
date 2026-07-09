@@ -21,51 +21,17 @@ export const features = [
   },
 ];
 
-export const problemsSolutions = [
+export const infoCards = [
   {
-    problem: "Getting started is easy",
-    problems: ["Create account", "Create recipe book","Start logging and tracking recipes"],
-    solution: "One app. All your recipe books",
-    solutions: [
+    title: "Getting started is easy",
+    info: ["Organizing and tracking your recipes", "Multiple recipe books"],
+  },
+  {
+    title: "Solution: One app. All your recipe books",
+    info: [
       "Consolidate all your recipes in a single recipe book.",
       "Or manage them across multiple books.",
       "Create, access, manage.",
-    ],
-  },
-  {
-    problem: "Intuitive Design",
-    problems: ["Learning to use another application"],
-    solution: "Solution: Intuitive Design",
-    solutions: [
-      "Reads like a book",
-      "",
-      "Virtually no set required",
-    ],
-  },
-  {
-    problem: "One app is all you need.",
-    problems: [
-      "Sharing and coordinating recipes",
-      "Sharing with multiple people",
-      "Updating others of changes or edits in recipes",
-    ],
-    solution: "Seamless collaboration",
-    solutions: [
-      "Share books and recipes instantly with others",
-      "Changes are live keeping recipient up to date",
-    ],
-  },
-  {
-    problem: "The problem",
-    problems: [
-      "Repetitive input.",
-      "Recipes share the same metrics e.g. 1 oz tequila.",
-      "Maintaining standard naming conventions",
-    ],
-    solution: "Reduce clutter",
-    solutions: [
-      "Write it down once - reuse.",
-      "Select created metrics from dropdown or autofill",
     ],
   },
 ];
