@@ -58,7 +58,7 @@ export default function Documentation() {
     const c = container.getBoundingClientRect();
     const i = item.getBoundingClientRect();
     const o = content.getBoundingClientRect();
-
+    
     setBrace({
       w: c.width,
       h: c.height,
@@ -86,6 +86,9 @@ export default function Documentation() {
   const stops = dark
     ? { a: "#a8a29e", b: "#f5f5f4" } // stone-400 -> stone-100
     : { a: "#57534e", b: "#1c1917" }; // stone-600 -> stone-900
+
+
+  const arr = ["string", "string2", "string3"];
 
   return (
     <div className={dark ? "dark" : ""}>
@@ -260,11 +263,16 @@ export default function Documentation() {
                         <p className="text-sm leading-relaxed text-stone-600 dark:text-stone-400">
                           {s.body}
                         </p>
-                        {s.code && (
+                        {s.instructions && (
                           // <pre className="mt-3 overflow-x-auto rounded-xl border border-gray-900/15 bg-stone-900 p-4 font-mono text-xs leading-relaxed text-stone-100 shadow-inner dark:border-white/10 dark:bg-black/40">
-                          //   <code>{s.code}</code>
+                          //   <instructions>{s.instructions}</instructions>
                           // </pre>
-                          <MonoPanel>{s.code}</MonoPanel>
+                          // arr.map((s) => <MonoPanel>{s}</MonoPanel>)
+                          <MonoPanel
+                            lines={[
+                              "Click 'Create a book'",
+                              "Give it a name",
+                              "You're ready to start sharing"]}/>
                         )}
                       </article>
                     ))}

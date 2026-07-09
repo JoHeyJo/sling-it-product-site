@@ -1,9 +1,4 @@
-import {
-  Rocket,
-  Share,
-  Pencil,
-  Search,
-} from "lucide-react";
+import { Rocket, Share, Pencil, Search, Plus } from "lucide-react";
 
 import { productSite } from "../links";
 
@@ -26,7 +21,15 @@ export const directories = [
             name, last name, username, and password.
           </>
         ),
-        instructions: "Create a book\nCreate your recipes\nManage your inventory",
+        instructions: (
+          <>
+            Create a book
+            <br />
+            Create your recipes
+            <br />
+            Manage your inventory
+          </>
+        ),
       },
       {
         heading: "On your first log in",
@@ -37,10 +40,19 @@ export const directories = [
             <br />
             Or create your own book to log your recipes
             <br />
-            <span className="font-bold">NOTE:</span> you do not need to create a recipe book to start using this app.
+            <span className="font-bold">NOTE:</span> you do not need to create a
+            recipe book to start using this app.
           </>
         ),
-        instructions: "Click 'Create a book'\nClick\nYou're ready to start sharing",
+        instructions: (
+          <>
+            Click 'Create a book'
+            <br />
+            Click {<Plus />}
+            <br />
+            You're ready to start sharing",
+          </>
+        ),
       },
     ],
   },
@@ -88,8 +100,9 @@ export const directories = [
       {
         heading: "DocsShell",
         body: "The top-level frame. Accepts the directory list, an optional footer node, and a theme flag. Children render into the middle panel.",
-        instructions: "type DocsShellProps = {\n  entries: DirEntry[]\n  footer?: ReactNode\n  theme?: 'light' | 'dark'\n}",
+        instructions:
+          "type DocsShellProps = {\n  entries: DirEntry[]\n  footer?: ReactNode\n  theme?: 'light' | 'dark'\n}",
       },
     ],
-  }
+  },
 ];
