@@ -21,19 +21,25 @@ export const features = [
   },
 ];
 
-export const infoCards = [
+export const information = [
   {
-    title: "Getting started is easy",
-    info: ["Organizing and tracking your recipes", "Multiple recipe books"],
-  },
-  {
-    title: "Solution: One app. All your recipe books",
-    info: [
-      "Consolidate all your recipes in a single recipe book.",
-      "Or manage them across multiple books.",
-      "Create, access, manage.",
+    leftCard: "One app, all your recipes",
+    leftPoints: [
+      "Organizing and tracking your recipes",
+      "Multiple recipe books"
     ],
+    rightCard: "Solution: One app. All your recipe books",
+    rightPoints: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
   },
+  {
+    leftCard: "One app, all your recipes",
+    leftPoints: [
+      "Organizing and tracking your recipes",
+      "Multiple recipe books"
+    ],
+    rightCard: "Solution: One app. All your recipe books",
+    rightPoints: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
+  }
 ];
 
 export const benefits = [
