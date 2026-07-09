@@ -29,7 +29,12 @@ export const information = [
       "Reads like a book.",
       "Create, access, manage.",
     ],
-    leftLink: { label: "Get Started", href: "/", isDocsLink: false },
+    leftLink: {
+      label: "Get Started",
+      href: "https://slingitdrinks.com/?tab=signup",
+      // href: "http://localhost:3000/?tab=signup",
+      isDocsLink: false,
+    },
 
     rightCard: "Create and manage your recipes",
     rightInfo: [
@@ -37,12 +42,16 @@ export const information = [
       "Create once - reuse whenever you need it.",
       "Quickly select tracked inventory for any new recipe.",
     ],
-    rightLink: { label: "docs", href: "", isDocsLink: true },
+    rightLink: { label: "Docs", href: "", isDocsLink: true },
   },
   {
     leftCard: "Share with friends, share with bartenders",
-    leftInfo: ["Share entire recipes books.", "Or just share one recipe.","Friends can collaborate, acquaintances can view."],
-    leftLink: { label: "docs", href: "", isDocsLink: true },
+    leftInfo: [
+      "Share entire recipes books.",
+      "Or just share one recipe.",
+      "Friends can collaborate, acquaintances can view.",
+    ],
+    leftLink: { label: "Docs", href: "", isDocsLink: true },
 
     rightCard: "Seamlessly build your recipe list",
     rightInfo: [
@@ -50,7 +59,7 @@ export const information = [
       "In app search finds it online and saves it to your catalog!",
       "Save as is or modify as you'd like.",
     ],
-    rightLink: { label: "docs", href: "", isDocsLink: true },
+    rightLink: { label: "Docs", href: "", isDocsLink: true },
   },
 ];
 
