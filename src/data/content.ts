@@ -1,5 +1,6 @@
-const { VITE_APP_URL, VITE_LOCAL_URL } = import.meta.env;
-const isDev = import.meta.env.DEV;
+import { productSite } from "../links";
+
+productSite
 
 export const features = [
   {
@@ -34,8 +35,7 @@ export const information = [
     ],
     leftLink: {
       label: "Get Started",
-      href: isDev ? VITE_LOCAL_URL : VITE_APP_URL,
-      isDocsLink: false,
+      href: productSite
     },
 
     rightCard: "Create and manage your recipes",
