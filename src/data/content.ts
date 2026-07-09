@@ -25,30 +25,30 @@ export const information = [
   {
     leftCard: "Getting started is easy",
     leftInfo: [
-      "One app all, your recipes",
-      "Reads like a book",
-      "Create, access, manage",
+      "One app all, your recipes.",
+      "Reads like a book.",
+      "Create, access, manage.",
     ],
     leftLink: { label: "Get Started", href: "/", isDocsLink: false },
 
-    rightCard: "Manage your recipe book ",
+    rightCard: "Create and manage your recipes",
     rightInfo: [
-      "Create books, create recipes",
-      "CAtegorize recipes ",
-      "Easily selected previously add inventory",
+      "Categorize drinks by recipe book or consolidate in one.",
+      "Create once - reuse whenever you need it.",
+      "Quickly select tracked inventory for any new recipe.",
     ],
     rightLink: { label: "docs", href: "", isDocsLink: true },
   },
   {
     leftCard: "Share with friends, share with bartenders",
-    leftInfo: ["Share your books", "Or just share recipes"],
+    leftInfo: ["Share entire recipes books.", "Or just share one recipe.","Friends can collaborate, acquaintances can view."],
     leftLink: { label: "docs", href: "", isDocsLink: true },
 
-    rightCard: "Search the internet for your recipe",
+    rightCard: "Seamlessly build your recipe list",
     rightInfo: [
-      "Consolidate all your recipes in a single recipe book",
-      "Or manage them multiple books",
-      "Create, access, manage, recipes across multiple recipe books",
+      "Recipe not logged?",
+      "In app search finds it online and saves it to your catalog!",
+      "Save as is or modify as you'd like.",
     ],
     rightLink: { label: "docs", href: "", isDocsLink: true },
   },
@@ -78,14 +78,17 @@ export const testimonials = [
 
 export const useCases = [
   {
-    title: "Log all Recipes",
+    title: "Log all Recipes. Anyone can share with you",
     blurb: "Food and drinks!",
   },
   {
     title: "Not just for bartenders",
     blurb: "log any kind of beverage",
   },
-  { title: "No need to create anything", blurb: "Use it as a personal recipe book that to view books others have shared with you" },
+  {
+    title: "Share to anyone, receive from anyone",
+    blurb: "Access to anyone's recipe book that has shared with you.",
+  },
 ];
 
 export const integrations = [
