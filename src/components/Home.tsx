@@ -9,8 +9,8 @@ function Home() {
     <>
       <Hero
         eyebrow="NEW"
-        title="Manage your recipes faster while slinging drinks! "
-        subtitle="Easy to use and polished application to share and organize recipes"
+        title="Manage recipes, Sling drinks!"
+        subtitle="Create, manage, and share your recipes."
         primaryCta={{
           label: "Get Started",
           href: "https://slingitdrinks.com/",
