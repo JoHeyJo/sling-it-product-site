@@ -78,14 +78,14 @@ export const testimonials = [
 
 export const useCases = [
   {
-    title: "SaaS Marketing",
-    blurb: "Feature pages, pricing, blog, changelog.",
+    title: "Log all Recipes",
+    blurb: "Food and drinks!",
   },
   {
-    title: "Developer Tools",
-    blurb: "Docs-first flows, code samples, status.",
+    title: "Not just for bartenders",
+    blurb: "log any kind of beverage",
   },
-  { title: "Mobile Apps", blurb: "App store links, walkthroughs, FAQs." },
+  { title: "No need to create anything", blurb: "Use it as a personal recipe book that to view books others have shared with you" },
 ];
 
 export const integrations = [
