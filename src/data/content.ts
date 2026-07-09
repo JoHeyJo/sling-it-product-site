@@ -24,8 +24,8 @@ export const features = [
 export const problemsSolutions = [
   {
     problem: "Getting started is easy",
-    problems: ["Organizing and tracking your recipes", "Multiple recipe books"],
-    solution: "Solution: One app. All your recipe books",
+    problems: ["Create account", "Create recipe book","Start logging and tracking recipes"],
+    solution: "One app. All your recipe books",
     solutions: [
       "Consolidate all your recipes in a single recipe book.",
       "Or manage them across multiple books.",
@@ -43,7 +43,7 @@ export const problemsSolutions = [
     ],
   },
   {
-    problem: "The problem",
+    problem: "One app is all you need.",
     problems: [
       "Sharing and coordinating recipes",
       "Sharing with multiple people",
