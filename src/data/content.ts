@@ -24,21 +24,21 @@ export const features = [
 export const information = [
   {
     leftCard: "One app, all your recipes",
-    leftPoints: [
+    leftInfo: [
       "Organizing and tracking your recipes",
       "Multiple recipe books"
     ],
     rightCard: "Solution: One app. All your recipe books",
-    rightPoints: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
+    rightInfo: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
   },
   {
     leftCard: "One app, all your recipes",
-    leftPoints: [
+    leftInfo: [
       "Organizing and tracking your recipes",
       "Multiple recipe books"
     ],
     rightCard: "Solution: One app. All your recipe books",
-    rightPoints: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
+    rightInfo: ["Consolidate all your recipes in a single recipe book","Or manage them multiple books","Create, access, manage, recipes across multiple recipe books"],
   }
 ];
 

@@ -40,10 +40,11 @@ function Home() {
       {information.map((data, index) => (
         <CardGrid
           key={index}
-          problem={data.problem}
-          problems={data.problems}
-          solution={data.solution}
-          solutions={data.solutions}
+          id={index}
+          leftCard={data.leftCard}
+          leftInfo={data.leftInfo}
+          rightCard={data.leftCard}
+          rightInfo={data.leftInfo}
         />
       ))}
       <UseCases />

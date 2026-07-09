@@ -7,10 +7,11 @@ import {
 } from "../styles";
 
 type CardGrid = {
-  problem: string;
-  problems: string[];
-  solution: string;
-  solutions: string[];
+  id: number;
+  leftCard: string;
+  leftInfo: string[];
+  rightCard: string;
+  rightInfo: string[];
 };
 
 function isEven(number: number) {
@@ -20,14 +21,14 @@ function isEven(number: number) {
 
 export default function CardGrid({
   id,
-  problem,
-  problems,
-  solution,
-  solutions,
+  leftCard,
+  leftInfo,
+  rightCard,
+  rightInfo,
 }: CardGrid) {
   return (
     <section
-      id="problem"
+      id="leftCard"
       className={`relative backdrop-blur-sm
             ${cardDimensions} ${bgGradient} ${cardBorder} ${darkBgGradient} ${darkCardBorder} bg-gradient-to-${isEven(id) ? "br" : "tr"}`}
     >
@@ -39,28 +40,28 @@ export default function CardGrid({
 
       <div className="grid gap-8 lg:grid-cols-2">
         <div
-          id="CardGrid-problem-container"
+          id="CardGrid-leftCard-container"
           className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
         >
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {problem}
+            {leftCard}
           </h2>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            {problems.map((problem, i) => (
-              <li key={i}>{problem}</li>
+            {leftInfo.map((leftCard, i) => (
+              <li key={i}>{leftCard}</li>
             ))}
           </ul>
         </div>
         <div
-          id="CardGrid-solution-container"
+          id="CardGrid-rightCard-container"
           className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
         >
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {solution}
+            {rightCard}
           </h3>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-            {solutions.map((solution, i) => (
-              <li key={i}>{solution}</li>
+            {rightInfo.map((rightCard, i) => (
+              <li key={i}>{rightCard}</li>
             ))}
           </ul>
           {/* <div className="mt-6 flex gap-3">
