@@ -3,6 +3,8 @@ import Features from "../sections/Features";
 import UseCases from "../sections/UseCases";
 import Hero from "./Hero";
 import { information } from "../data/content";
+const { VITE_APP_URL, VITE_LOCAL_URL } = import.meta.env;
+const isDev = import.meta.env.DEV;
 
 function Home() {
   return (
@@ -13,7 +15,7 @@ function Home() {
         subtitle="Create, manage, and share your recipes."
         primaryCta={{
           label: "Get Started",
-          href: "https://slingitdrinks.com/",
+          href: isDev ? VITE_LOCAL_URL : VITE_APP_URL,
         }}
         secondaryCta={{ label: "View Docs", href: "#" }}
         screenshotUrl="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1800&auto=format&fit=crop"

@@ -1,3 +1,6 @@
+const { VITE_APP_URL, VITE_LOCAL_URL } = import.meta.env;
+const isDev = import.meta.env.DEV;
+
 export const features = [
   {
     icon: "📕",
@@ -31,8 +34,7 @@ export const information = [
     ],
     leftLink: {
       label: "Get Started",
-      href: "https://slingitdrinks.com/?tab=signup",
-      // href: "http://localhost:3000/?tab=signup",
+      href: isDev ? VITE_LOCAL_URL : VITE_APP_URL,
       isDocsLink: false,
     },
 
