@@ -264,15 +264,9 @@ export default function Documentation() {
                           {s.body}
                         </p>
                         {s.instructions && (
-                          // <pre className="mt-3 overflow-x-auto rounded-xl border border-gray-900/15 bg-stone-900 p-4 font-mono text-xs leading-relaxed text-stone-100 shadow-inner dark:border-white/10 dark:bg-black/40">
-                          //   <instructions>{s.instructions}</instructions>
-                          // </pre>
-                          // arr.map((s) => <MonoPanel>{s}</MonoPanel>)
+
                           <MonoPanel
-                            lines={[
-                              "Click 'Create a book'",
-                              "Give it a name",
-                              "You're ready to start sharing"]}/>
+                            lines={s.instructions}/>
                         )}
                       </article>
                     ))}

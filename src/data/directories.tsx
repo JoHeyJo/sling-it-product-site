@@ -21,15 +21,11 @@ export const directories = [
             name, last name, username, and password.
           </>
         ),
-        instructions: (
-          <>
-            Create a book
-            <br />
-            Create your recipes
-            <br />
-            Manage your inventory
-          </>
-        ),
+        instructions: [
+          "Create a book",
+          "Create your recipes",
+          "Manage your inventory",
+        ],
       },
       {
         heading: "On your first log in",
@@ -44,65 +40,61 @@ export const directories = [
             recipe book to start using this app.
           </>
         ),
-        instructions: (
-          <>
-            Click 'Create a book'
-            <br />
-            Click {<Plus />}
-            <br />
-            You're ready to start sharing",
-          </>
-        ),
+        instructions: [
+          "Create a book",
+          "Create your recipes",
+          "Manage your inventory",
+        ],
       },
     ],
   },
-  {
-    id: "create",
-    label: "Create Books/Recipes",
-    icon: Pencil,
-    blurb:
-      "Composable building blocks with sensible defaults and full theming.",
-    sections: [
-      {
-        heading: "Sidebar",
-        body: "A persistent navigation column. Pass an array of entries; the active entry is derived from the route so you never track selection by hand.",
-        instructions: "<Sidebar entries={dirs} activeId={dirId} />",
-      },
-      {
-        heading: "Panel",
-        body: "The content surface on the right. It reserves a stable minimum height while resources load, which keeps the footer pinned instead of flashing upward.",
-      },
-    ],
-  },
-  {
-    id: "share",
-    label: "Share",
-    icon: Share,
-    blurb: "Small, focused hooks for selection, measurement, and data loading.",
-    sections: [
-      {
-        heading: "useResource",
-        body: "Fetches a file from your public folder and returns a loading flag alongside the data, so a view can render a skeleton of the right size before content arrives.",
-        instructions: "const { data, loading } = useResource('/data/api.json')",
-      },
-      {
-        heading: "useMeasure",
-        body: "Returns a ref and the measured box of any element via a ResizeObserver. The brace connector uses it to stay anchored across resizes.",
-      },
-    ],
-  },
-  {
-    id: "search",
-    label: "Search",
-    icon: Search,
-    blurb: "Every prop, return value, and event, typed and documented.",
-    sections: [
-      {
-        heading: "DocsShell",
-        body: "The top-level frame. Accepts the directory list, an optional footer node, and a theme flag. Children render into the middle panel.",
-        instructions:
-          "type DocsShellProps = {\n  entries: DirEntry[]\n  footer?: ReactNode\n  theme?: 'light' | 'dark'\n}",
-      },
-    ],
-  },
+  // {
+  //   id: "create",
+  //   label: "Create Books/Recipes",
+  //   icon: Pencil,
+  //   blurb:
+  //     "Composable building blocks with sensible defaults and full theming.",
+  //   sections: [
+  //     {
+  //       heading: "Sidebar",
+  //       body: "A persistent navigation column. Pass an array of entries; the active entry is derived from the route so you never track selection by hand.",
+  //       instructions: "<Sidebar entries={dirs} activeId={dirId} />",
+  //     },
+  //     {
+  //       heading: "Panel",
+  //       body: "The content surface on the right. It reserves a stable minimum height while resources load, which keeps the footer pinned instead of flashing upward.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "share",
+  //   label: "Share",
+  //   icon: Share,
+  //   blurb: "Small, focused hooks for selection, measurement, and data loading.",
+  //   sections: [
+  //     {
+  //       heading: "useResource",
+  //       body: "Fetches a file from your public folder and returns a loading flag alongside the data, so a view can render a skeleton of the right size before content arrives.",
+  //       instructions: "const { data, loading } = useResource('/data/api.json')",
+  //     },
+  //     {
+  //       heading: "useMeasure",
+  //       body: "Returns a ref and the measured box of any element via a ResizeObserver. The brace connector uses it to stay anchored across resizes.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "search",
+  //   label: "Search",
+  //   icon: Search,
+  //   blurb: "Every prop, return value, and event, typed and documented.",
+  //   sections: [
+  //     {
+  //       heading: "DocsShell",
+  //       body: "The top-level frame. Accepts the directory list, an optional footer node, and a theme flag. Children render into the middle panel.",
+  //       instructions:
+  //         "type DocsShellProps = {\n  entries: DirEntry[]\n  footer?: ReactNode\n  theme?: 'light' | 'dark'\n}",
+  //     },
+  //   ],
+  // },
 ];
