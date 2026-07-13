@@ -260,7 +260,7 @@ export default function Documentation() {
                           </span>
                           {s.heading}
                         </h3>
-                        <p className="text-sm leading-relaxed text-stone-600 dark:text-stone-400">
+                        <p className="text-sm p-3 leading-relaxed text-stone-600 dark:text-stone-400">
                           {s.body}
                         </p>
                         {s.instructions && (
