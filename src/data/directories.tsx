@@ -1,5 +1,6 @@
-import { Rocket, Share, Pencil, Search, Plus } from "lucide-react";
-
+import { Rocket, Share, Pencil, Search, Plus, Minus, Eye } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { productSite } from "../links";
 
 export const directories = [
@@ -94,9 +95,9 @@ export const directories = [
           "You can individually build an ingredient out of these parts giving you unlimited customization to track ingredients.",
           <>
             <span className="font-bold">NOTE:</span>A name is required to save
-            an ingredient as a template. If you are brainstorming
-            ideas and you only have working pieces. You must give this a name to save it.
-            The same applies to individual ingredients. You need an item name to
+            an ingredient as a template. If you are brainstorming ideas and you
+            only have working pieces. You must give this a name to save it. The
+            same applies to individual ingredients. You need an item name to
             save part of an ingredient as a template.
           </>,
           // <><span className="font-bold">NOTE:</span> you cannot save ingredients as a whole.</>,
@@ -106,39 +107,27 @@ export const directories = [
             Click the "<Plus className="inline h-4 w-4 shrink-0" />" on the top
             right of the left column to create a recipe. Next to "Search"
           </>,
+          "Create ingredient: Amount(Optional), Unit(Optional), Name(Required) e.g 1 oz Jameson",
+          "Choose from available options in dropdown or type one in and save it",
+          <>
+            Click the "<Plus className="inline h-4 w-4 shrink-0" />" for
+            additional ingredient
+          </>,
+          <>
+            Or click the "<Minus className="inline h-4 w-4 shrink-0" />" to
+            remove ingredient
+          </>,
+          "Create instruction: Choose from available options in dropdown or type one in and save it",
+          "Filling all the available instruction slots automatically creates a new one.",
+          "Delete instruction to remove input slot. Last input slot will remain empty instead of being removed",
         ],
       },
     ],
   },
   {
-    id: "share",
-    label: "Share",
-    icon: Share,
-    blurb: "Small, focused hooks for selection, measurement, and data loading.",
-    sections: [
-      {
-        heading: "useResource",
-        body: [
-          "Fetches a file from your public folder and returns a loading flag alongside the data, so a view can render a skeleton of the right size before content arrives.",
-        ],
-        instructions: [
-          "Create a book",
-          "Create your recipes",
-          "Manage your inventory",
-        ],
-      },
-      {
-        heading: "useMeasure",
-        body: [
-          "Returns a ref and the measured box of any element via a ResizeObserver. The brace connector uses it to stay anchored across resizes.",
-        ],
-      },
-    ],
-  },
-  {
-    id: "search",
-    label: "Search",
-    icon: Search,
+    id: "view",
+    label: "View",
+    icon: Eye,
     blurb: "Every prop, return value, and event, typed and documented.",
     sections: [
       {
@@ -150,6 +139,59 @@ export const directories = [
           "Create a book",
           "Create your recipes",
           "Manage your inventory",
+        ],
+      },
+    ],
+  },
+  {
+    id: "share",
+    label: "Share",
+    icon: Share,
+    blurb: "Sharing is caring",
+    sections: [
+      {
+        heading: "Share your book",
+        body: [
+          "If are the creator you can share your book",
+          "Share with others to collaborate or just to view your recipes",
+        ],
+        instructions: [
+          <>
+            Next to your recipe book name click{" "}
+            <FontAwesomeIcon icon={faShareFromSquare} />
+          </>,
+          "Choose 'Collaborator' or 'View Only'",
+          "Enter the username of who you want to share with",
+        ],
+      },
+      {
+        heading: "Share your recipe",
+        body: [
+          "You can share any recipe that belongs to you in any book you own.",
+          "Recipients cannot edit your shared recipe only view and copy it as their own. Info here.",
+        ],
+        instructions: [
+          <>
+            Select a recipe and this icon will appear to the right{" "}
+            <FontAwesomeIcon icon={faShareFromSquare} />
+          </>,
+          "Enter the username of who you want to share your recipe with",
+        ],
+      },
+    ],
+  },
+  {
+    id: "search",
+    label: "Search",
+    icon: Search,
+    blurb: "Find any recipe even if you haven't created it yet.",
+    sections: [
+      {
+        heading: "Crawl the web",
+        body: ["This feature is currently under development details to follow."
+        ],
+        instructions: [
+
         ],
       },
     ],

@@ -262,7 +262,7 @@ export default function Documentation() {
                         </h3>
                         <div className="text-sm p-3 leading-relaxed text-stone-600 dark:text-stone-400">
                           {s.body.map((line, i) => (
-                            <div key={i} className="py-1">{line}</div>
+                            <div key={i} className="py-0.5">{line}</div>
                           ))}
                         </div>
                         {s.instructions && <MonoPanel lines={s.instructions} />}
