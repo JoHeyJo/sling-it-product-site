@@ -254,20 +254,18 @@ export default function Documentation() {
                   <div className="space-y-8">
                     {selected.sections.map((s) => (
                       <article key={s.heading}>
-                        <h3 className="mb-1.5 flex items-center gap-2 font-mono text-sm font-semibold text-stone-800 dark:text-stone-100">
+                        <h3 className="mb-1 flex items-center gap-2 font-mono text-sm font-semibold text-stone-800 dark:text-stone-100">
                           <span className="text-stone-400 dark:text-stone-500">
                             {"{"}
                           </span>
                           {s.heading}
                         </h3>
-                        <p className="text-sm p-3 leading-relaxed text-stone-600 dark:text-stone-400">
-                          {s.body}
-                        </p>
-                        {s.instructions && (
-
-                          <MonoPanel
-                            lines={s.instructions}/>
-                        )}
+                        <div className="text-sm p-3 leading-relaxed text-stone-600 dark:text-stone-400">
+                          {s.body.map((line, i) => (
+                            <div key={i} className="py-1">{line}</div>
+                          ))}
+                        </div>
+                        {s.instructions && <MonoPanel lines={s.instructions} />}
                       </article>
                     ))}
                   </div>
