@@ -1,4 +1,4 @@
-import { Rocket, Share, Pencil, Search, Plus, Minus, Eye } from "lucide-react";
+import { Rocket, Share, Pencil, Search, Plus, Minus, Eye, ArrowBigRight, ArrowRight } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { productSite } from "../links";
@@ -128,17 +128,61 @@ export const directories = [
     id: "view",
     label: "View",
     icon: Eye,
-    blurb: "Every prop, return value, and event, typed and documented.",
+    blurb: "Reads like a book",
     sections: [
       {
-        heading: "DocsShell",
+        heading: "Created Recipes",
         body: [
-          "The top-level frame. Accepts the directory list, an optional footer node, and a theme flag. Children render into the middle panel.",
+          "All your recipes are organized by the book you created it in",
+          <>
+            Once selected you can edit them or delete them more info{" "}
+            <ArrowRight className="inline h-4 w-4 shrink-0" />{" "}
+            <a className="text-stone-600" href={""}>
+              Manage
+            </a>
+          </>,
         ],
         instructions: [
-          "Create a book",
-          "Create your recipes",
-          "Manage your inventory",
+          "Select recipe book from dropdown menu next to 'Recipes for:'",
+          "Below view your recipes",
+          "On the right panel you can view your select recipe",
+          "On the right panel you can view your select recipe",
+          "Expand recipe button ... WIP",
+        ],
+      },
+      {
+        heading: "Shared Recipes",
+        body: [
+          "It's like an inbox for recipes that are shared with you",
+          "Every recipe that any user shares with you will appear in this recipe book",
+          <>
+            <span className="font-bold">NOTE:</span> This recipe will never
+            belong to you. The original author will always have control of this
+            recipe but you are able to copy these recipes to any of your own
+            recipe books. This will give you full editorial control over them.
+            They are essentially yours at this point. More info{" "}
+            <a className="text-stone-600" href={""}>
+              here
+            </a>
+          </>,
+          ,
+        ],
+        instructions: [
+          "Select 'Shared Recipes' from dropdown menu next to 'Recipes for:'",
+          "Below view recipes that have been shared with you",
+          "On the right panel you can view your select recipe",
+          "Select>>>>> ",
+          "Expand recipe button ... WIP",
+        ],
+      },
+      {
+        heading: "Shared Recipe Books",
+        body: ["All your recipes are organized by the book you created it in"],
+        instructions: [
+          "Select recipe book from dropdown menu next to 'Recipes for:'",
+          "Below view your recipes",
+          "On the right panel you can view your select recipe",
+          "Expand recipe button ... WIP",
         ],
       },
     ],
@@ -168,7 +212,22 @@ export const directories = [
         heading: "Share your recipe",
         body: [
           "You can share any recipe that belongs to you in any book you own.",
-          "Recipients cannot edit your shared recipe only view and copy it as their own. Info here.",
+          <>
+            Recipients cannot edit your shared recipe only view and copy it as
+            their own. Info{" "}
+            <a className="text-stone-600" href={""}>
+              here
+            </a>
+            .
+          </>,
+          <>
+            <span className="font-bold">NOTE:</span> Any updates made to your
+            recipe will be reflected in the recipients{" "}
+            <a className="text-stone-600" href={""}>
+              Shared Recipe version
+            </a>
+            .
+          </>,
         ],
         instructions: [
           <>
@@ -188,11 +247,28 @@ export const directories = [
     sections: [
       {
         heading: "Crawl the web",
-        body: ["This feature is currently under development details to follow."
+        body: [
+          "This feature is currently under development details to follow.",
         ],
-        instructions: [
-
-        ],
+        instructions: [],
+      },
+    ],
+  },
+  {
+    id: "manage",
+    label: "Manage",
+    icon: Search,
+    blurb: "Find any recipe even if you haven't created it yet.",
+    sections: [
+      {
+        heading: "Edit",
+        body: ["Docs under constructions"],
+        instructions: [],
+      },
+      {
+        heading: "Delete/Remove",
+        body: ["Docs under constructions"],
+        instructions: [],
       },
     ],
   },
