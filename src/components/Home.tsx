@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import { information } from "../data/content";
 import { productSite } from "../links";
 
-function Home() {
+function Home({ref}) {
   return (
     <>
       <Hero
@@ -37,7 +37,7 @@ function Home() {
           },
         ]}
       />
-      <Features />
+      <Features featureRef={ref}/>
       {information.map((data, index) => (
         <CardGrid
           key={index}

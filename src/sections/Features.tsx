@@ -7,9 +7,10 @@ import {
   darkCardBorder,
 } from "../styles";
 
-export default function Features() {
+export default function Features({ featureRef }) {
   return (
     <section
+      ref={featureRef}
       id="Features"
       className={` 
       ${cardDimensions} ${bgGradient} ${cardBorder} border ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ToggleThemeSwitch from "./ToggleThemeSwtich";
 
-type NavLink = { label: string; href: string };
+type NavLink = { label: string; href?: string; function?: Function };
 type NavBarProps = {
   logo?: any;
   links?: NavLink[];
@@ -33,7 +33,10 @@ function NavBar({ logo, links, cta }: NavBarProps) {
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${surface}`}>
         <div className="flex h-16 items-center justify-between">
           {/* Left: Logo */}
-          <a href="/" className={`font-bold flex items-center gap-2 ${linkBase}`}>
+          <a
+            href="/"
+            className={`font-bold flex items-center gap-2 ${linkBase}`}
+          >
             {logo}
           </a>
 

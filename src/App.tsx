@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -7,6 +8,13 @@ import Documentation from "./sections/Documentation";
 import { productSite } from "./links";
 
 function App() {
+
+  const featureRef = useRef(null);
+
+  function scrollToFeature(){
+    featureRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   return (
     <div
       className="min-h-screen dark:bg-gray-900 a
@@ -18,7 +26,7 @@ function App() {
       <NavBar
         logo={"SLING IT"}
         links={[
-          { label: "Features", href: "#features" },
+          { label: "Features", function: scrollToFeature },
           { label: "Docs", href: "docs/?section=getting-started" },
           { label: "Blog", href: "blog" },
         ]}
@@ -29,7 +37,7 @@ function App() {
       />
       <section className="Product-Sections">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home ref={featureRef} />} />
           <Route path="blog" element={<Blog />} />
           <Route path="docs" element={<Documentation />} />
         </Routes>
