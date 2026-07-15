@@ -24,7 +24,7 @@ export default function UseCases() {
         className="rounded-2xl shadow-2xl p-8 ring-1 ring-black/5 backdrop-blur-md dark:bg-gray-900/80 dark:ring-white/10"
       >
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Use cases
+          Sling it is:
         </h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {useCases.map((u) => (

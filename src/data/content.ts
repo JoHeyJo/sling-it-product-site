@@ -97,16 +97,16 @@ export const testimonials = [
 
 export const useCases = [
   {
-    title: "Log all Recipes. Anyone can share with you",
-    blurb: "Food and drinks!",
+    title: "For all recipes",
+    blurb: "log your food and drink recipes!",
   },
   {
-    title: "Not just for bartenders",
-    blurb: "log any kind of beverage",
+    title: "For everyone, not just for bartenders",
+    blurb: "Log any kind of beverage!",
   },
   {
-    title: "Share to anyone, receive from anyone",
-    blurb: "Access to anyone's recipe book that has shared with you.",
+    title: "For sharing",
+    blurb: "Share your recipes, access your friends recipes!",
   },
 ];
 
