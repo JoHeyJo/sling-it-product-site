@@ -42,19 +42,23 @@ function NavBar({ logo, links, cta }: NavBarProps) {
 
           {/* Center: desktop links */}
           <nav className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                className={`px-3 py-2 text-sm font-medium
+            {links.map((l) =>
+              l.function ? (
+                <button onClick={()=>l.function()}>{l.label}</button>
+              ) : (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className={`px-3 py-2 text-sm font-medium
               bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600
               bg-clip-text transition-colors duration-300
               ${linkBase} 
               hover:text-transparent`}
-              >
-                {l.label}
-              </a>
-            ))}
+                >
+                  {l.label}
+                </a>
+              ),
+            )}
           </nav>
 
           {/* Right:Color Scheme +  CTA + Mobile toggle */}
