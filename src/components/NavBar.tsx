@@ -28,6 +28,12 @@ function NavBar({ logo, links, cta }: NavBarProps) {
     ? "text-gray-700 hover:text-gray-300 dark:text-gray-200 dark:hover:text-blue-300"
     : "text-gray-900 hover:text-gray-500 dark:text-white/90 dark:hover:text-blue-300";
 
+  const linkStyles = `px-3 py-2 text-sm font-medium
+              bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600
+              bg-clip-text transition-colors duration-300
+              ${linkBase} 
+              hover:text-transparent`;
+
   return (
     <header className={`${shell}`}>
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${surface}`}>
@@ -44,17 +50,11 @@ function NavBar({ logo, links, cta }: NavBarProps) {
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) =>
               l.function ? (
-                <button onClick={()=>l.function()}>{l.label}</button>
+                <button className={linkStyles} onClick={() => l.function()}>
+                  {l.label}
+                </button>
               ) : (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className={`px-3 py-2 text-sm font-medium
-              bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600
-              bg-clip-text transition-colors duration-300
-              ${linkBase} 
-              hover:text-transparent`}
-                >
+                <a key={l.label} href={l.href} className={linkStyles}>
                   {l.label}
                 </a>
               ),
