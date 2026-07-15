@@ -6,6 +6,7 @@ import {
   Hash,
 } from "lucide-react";
 import { directories } from "../data/directories";
+import { useSearchParams } from "react-router-dom";
 
  import { cardBorder, bgGradient } from "../styles";
 import { MonoPanel } from "../components/MonoPanel";
@@ -38,15 +39,20 @@ function bracePath({ tipX, tipY, armX, topY, botY }) {
 
 /* ------------------------------------------------------------------ */
 export default function Documentation() {
+  const [searchParams] = useSearchParams();
+  const sortType = searchParams.get("section")
+
   const [dark, setDark] = useState(false);
-  const [selectedId, setSelectedId] = useState(directories[0].id);
+  const [selectedId, setSelectedId] = useState(sortType);
   const [brace, setBrace] = useState(null);
+console.log("selected id",selectedId)
 
   const containerRef = useRef(null);
   const contentRef = useRef(null);
   const itemRefs = useRef({});
 
   const selected = directories.find((d) => d.id === selectedId);
+  
 
   /* Measure the geometry the brace needs, relative to the row container. */
   const measure = useCallback(() => {
@@ -86,9 +92,6 @@ export default function Documentation() {
   const stops = dark
     ? { a: "#a8a29e", b: "#f5f5f4" } // stone-400 -> stone-100
     : { a: "#57534e", b: "#1c1917" }; // stone-600 -> stone-900
-
-
-  const arr = ["string", "string2", "string3"];
 
   return (
     <div className={dark ? "dark" : ""}>

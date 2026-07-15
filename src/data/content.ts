@@ -35,7 +35,7 @@ export const information = [
     ],
     leftLink: {
       label: "Get Started",
-      href: productSite
+      href: productSite,
     },
 
     rightCard: "Create and manage your recipes",
@@ -44,7 +44,11 @@ export const information = [
       "Create once - reuse whenever you need it.",
       "Quickly select tracked inventory for any new recipe.",
     ],
-    rightLink: { label: "Docs", href: "docs", isDocsLink: true },
+    rightLink: {
+      label: "Docs",
+      href: "/docs?section=create",
+      isDocsLink: true,
+    },
   },
   {
     leftCard: "Share with friends, share with bartenders",
@@ -53,7 +57,7 @@ export const information = [
       "Or just share one recipe.",
       "Friends can collaborate, acquaintances can view.",
     ],
-    leftLink: { label: "Docs", href: "docs", isDocsLink: true },
+    leftLink: { label: "Docs", href: "/docs?section=share", isDocsLink: true },
 
     rightCard: "Seamlessly build your recipe list",
     rightInfo: [
@@ -61,7 +65,11 @@ export const information = [
       "In app search finds it online and saves it to your catalog!",
       "Save as is or modify as you'd like.",
     ],
-    rightLink: { label: "Docs", href: "docs", isDocsLink: true },
+    rightLink: {
+      label: "Docs",
+      href: "/docs?section=search",
+      isDocsLink: true,
+    },
   },
 ];
 

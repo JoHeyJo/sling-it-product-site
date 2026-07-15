@@ -19,7 +19,7 @@ function App() {
         logo={"SLING IT"}
         links={[
           { label: "Features", href: "#features" },
-          { label: "Docs", href: "docs" },
+          { label: "Docs", href: "docs/?section=getting-started" },
           { label: "Blog", href: "blog" },
         ]}
         cta={{

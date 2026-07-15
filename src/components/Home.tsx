@@ -16,7 +16,7 @@ function Home() {
           label: "Get Started",
           href: productSite,
         }}
-        secondaryCta={{ label: "View Docs", href: "#" }}
+        secondaryCta={{ label: "View Docs", href: "/docs/?section=getting-started" }}
         screenshotUrl="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1800&auto=format&fit=crop"
         stats={[
           { label: "Teams", value: "3k+" },
