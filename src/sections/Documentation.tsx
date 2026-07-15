@@ -40,12 +40,11 @@ function bracePath({ tipX, tipY, armX, topY, botY }) {
 /* ------------------------------------------------------------------ */
 export default function Documentation() {
   const [searchParams] = useSearchParams();
-  const sortType = searchParams.get("section")
+  const selectedSectionId = searchParams.get("section")
 
   const [dark, setDark] = useState(false);
-  const [selectedId, setSelectedId] = useState(sortType);
+  const [selectedId, setSelectedId] = useState(selectedSectionId);
   const [brace, setBrace] = useState(null);
-console.log("selected id",selectedId)
 
   const containerRef = useRef(null);
   const contentRef = useRef(null);
