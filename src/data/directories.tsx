@@ -6,14 +6,12 @@ import {
   Plus,
   Minus,
   Eye,
-  ArrowBigRight,
-  ArrowRight,
   SquarePen,
+  SquareChartGantt,
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEye,
-  faShare,
   faShareFromSquare,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
@@ -37,14 +35,14 @@ export const directories = [
             .{" "}
           </>,
           <>
-            <span className="font-bold">Required</span>: unique email, first
+            <span className="font-bold">Required</span>: email, first
             name, last name, username, and password.
           </>,
         ],
         instructions: [
           "Create a book",
           "Create your recipes",
-          "Manage your inventory",
+          "View your recipes",
         ],
       },
       {
@@ -287,25 +285,10 @@ export const directories = [
     ],
   },
   {
-    id: "search",
-    label: "Search",
-    icon: Search,
-    blurb: "Find any recipe even if you haven't created it yet.",
-    sections: [
-      {
-        heading: "Crawl the web",
-        body: [
-          "This feature is currently under development details to follow.",
-        ],
-        instructions: [],
-      },
-    ],
-  },
-  {
     id: "manage",
     label: "Manage",
-    icon: Search,
-    blurb: "Find any recipe even if you haven't created it yet.",
+    icon: SquareChartGantt,
+    blurb: "Edit, copy, delete.",
     sections: [
       {
         heading: "Edit",
@@ -320,6 +303,21 @@ export const directories = [
       {
         heading: "Delete/Remove",
         body: ["Docs under constructions"],
+        instructions: [],
+      },
+    ],
+  },
+  {
+    id: "search",
+    label: "Search",
+    icon: Search,
+    blurb: "Find any recipe even if you haven't created it yet.",
+    sections: [
+      {
+        heading: "Crawl the web",
+        body: [
+          "This feature is currently under development details to follow.",
+        ],
         instructions: [],
       },
     ],
