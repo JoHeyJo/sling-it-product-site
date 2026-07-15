@@ -1,6 +1,22 @@
-import { Rocket, Share, Pencil, Search, Plus, Minus, Eye, ArrowBigRight, ArrowRight } from "lucide-react";
+import {
+  Rocket,
+  Share,
+  Pencil,
+  Search,
+  Plus,
+  Minus,
+  Eye,
+  ArrowBigRight,
+  ArrowRight,
+  SquarePen,
+} from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEye,
+  faShare,
+  faShareFromSquare,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import { productSite } from "../links";
 
 export const directories = [
@@ -135,8 +151,7 @@ export const directories = [
         body: [
           "All your recipes are organized by the book you created it in",
           <>
-            Once selected you can edit them or delete them more info{" "}
-            <ArrowRight className="inline h-4 w-4 shrink-0" />{" "}
+            Once selected you can edit or delete your recipes. Info at{" "}
             <a className="text-stone-600" href={""}>
               Manage
             </a>
@@ -144,9 +159,12 @@ export const directories = [
         ],
         instructions: [
           "Select recipe book from dropdown menu next to 'Recipes for:'",
-          "Below view your recipes",
-          "On the right panel you can view your select recipe",
-          "On the right panel you can view your select recipe",
+          "View recipes below",
+          "View selected recipe on right panel",
+          <>
+            Click <SquarePen className="inline h-4 w-4 shrink-0" /> - top right
+            to edit/delete
+          </>,
           "Expand recipe button ... WIP",
         ],
       },
@@ -156,33 +174,62 @@ export const directories = [
           "It's like an inbox for recipes that are shared with you",
           "Every recipe that any user shares with you will appear in this recipe book",
           <>
-            <span className="font-bold">NOTE:</span> This recipe will never
-            belong to you. The original author will always have control of this
-            recipe but you are able to copy these recipes to any of your own
-            recipe books. This will give you full editorial control over them.
-            They are essentially yours at this point. More info{" "}
+            These recipes can only be copied or removed. Info at{" "}
             <a className="text-stone-600" href={""}>
-              here
+              Manage
             </a>
+          </>,
+          <>
+            <span className="font-bold">NOTE:</span> Recipe does not belong to
+            you. Original author will always have control of these recipes.
+            These recipes can be copied to any recipe book you own, granting
+            full editorial control over them.
           </>,
           ,
         ],
         instructions: [
           "Select 'Shared Recipes' from dropdown menu next to 'Recipes for:'",
-          "Below view recipes that have been shared with you",
-          "On the right panel you can view your select recipe",
-          "Select>>>>> ",
+          "View recipes shared with you below",
+          "View selected recipe on right panel",
+          <>
+            Click <SquarePen className="inline h-4 w-4 shrink-0" /> - top right
+            to copy/remove
+          </>,
           "Expand recipe button ... WIP",
         ],
       },
       {
         heading: "Shared Recipe Books",
-        body: ["All your recipes are organized by the book you created it in"],
+        body: [
+          "Privileges will be depicted by icons next to the selected book",
+          "As a collaborator you have the same privileges as the author except you cannot share this book.",
+          "As a viewer you can only view recipes",
+        ],
         instructions: [
-          "Select recipe book from dropdown menu next to 'Recipes for:'",
-          "Below view your recipes",
-          "On the right panel you can view your select recipe",
-          "Expand recipe button ... WIP",
+          <>
+            {" "}
+            <FontAwesomeIcon
+              className="inline h-4 w-4 shrink-0"
+              icon={faUsers}
+            />{" "}
+            - you are a collaborator
+          </>,
+          <>
+            {" "}
+            <FontAwesomeIcon
+              className="inline h-4 w-4 shrink-0"
+              icon={faEye}
+            />{" "}
+            - you can only view recipes
+          </>,
+          <>
+            {" "}
+            <FontAwesomeIcon
+              className="inline h-4 w-4 shrink-0"
+              icon={faShareFromSquare}
+            />{" "}
+            - you are the author
+          </>,
         ],
       },
     ],
@@ -262,6 +309,11 @@ export const directories = [
     sections: [
       {
         heading: "Edit",
+        body: ["Docs under constructions"],
+        instructions: [],
+      },
+      {
+        heading: "Copy",
         body: ["Docs under constructions"],
         instructions: [],
       },
