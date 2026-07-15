@@ -1,4 +1,4 @@
-import { bgGradient, cardDimensions, darkBgGradient } from "../styles";
+import { bgGradient, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
 import LogoTicker from "./LogoTicker";
 
 /**
@@ -53,7 +53,7 @@ export default function Hero({
              backdrop-blur-sm
              /* Border effect*/
              rounded-2xl shadow-lg 
-             ${bgGradient} ${darkBgGradient}
+             ${bgGradient} ${darkBgGradient} 
              `}
       >
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
@@ -134,7 +134,7 @@ export default function Hero({
         </div>
 
         {/* Logo ticker */}
-        {logos && logos.length > 0 && <LogoTicker logos={logos} />}
+        {/* {logos && logos.length > 0 && <LogoTicker logos={logos} />} */}
       </div>
     </section>
   );

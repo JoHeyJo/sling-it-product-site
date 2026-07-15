@@ -11,9 +11,14 @@ export default function Features() {
   return (
     <section
       id="Features"
-      className={` 
-      ${cardDimensions} ${bgGradient} ${cardBorder} border ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
+      className={` relative
+      ${cardDimensions} ${bgGradient} ${cardBorder}  ${darkBgGradient} ${darkCardBorder} bg-gradient-to-tr`}
     >
+      <div
+        id="edge-blur-top"
+        className="absolute rounded-2xl top-0 left-1/2 h-1 w-[98%] -translate-x-1/2 
+                bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
+      />
       <div
         id="Features-inner-container"
         className="rounded-2xl 

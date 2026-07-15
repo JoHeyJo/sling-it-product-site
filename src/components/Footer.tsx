@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="border-t border-black/5 bg-stone-200 backdrop-blur-md dark:border-white/10 dark:bg-gray-900/80">
       <div
         id="edge-blur-top"
-        className="absolute rounded-2xl -top-1 left-1/2 h-1 w-[77%] -translate-x-1/2 bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
+        className="absolute rounded-2xl -top-1 left-1/2 h-1 w-[100%] -translate-x-1/2 bg-gradient-to-b from-slate-300/40 to-transparent blur-[5px]"
       />
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
