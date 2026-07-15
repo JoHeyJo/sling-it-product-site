@@ -1,21 +1,24 @@
 export default function Footer() {
   const product = [
     { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Integrations", href: "#integrations" },
-    { label: "Changelog", href: "#changelog" },
+    { label: "Blog", href: "#blog" },
+    // { label: "Pricing", href: "#pricing" },
+    // { label: "Integrations", href: "#integrations" },
+    // { label: "Changelog", href: "#changelog" },
   ];
   const company = [
     { label: "About", href: "#about" },
-    { label: "Careers", href: "#careers" },
-    { label: "Press", href: "#press" },
-    { label: "Contact", href: "#contact" },
+    { label: "LinkedIn", href: "#linkedin" },
+    // { label: "Careers", href: "#careers" },
+    // { label: "Press", href: "#press" },
+    // { label: "Contact", href: "#contact" },
   ];
   const resources = [
     { label: "Docs", href: "#docs" },
-    { label: "API", href: "#api" },
-    { label: "Guides", href: "#guides" },
-    { label: "Support", href: "#support" },
+    { label: "Github", href: "#github" },
+    // { label: "API", href: "#api" },
+    // { label: "Guides", href: "#guides" },
+    // { label: "Support", href: "#support" },
   ];
 
   return (
@@ -32,12 +35,13 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-gray-900 dark:text-gray-100"
             >
               <span className="inline-block h-6 w-6 rounded bg-blue-900"></span>
-              <span className="text-base font-semibold">YourLogo</span>
+              <span className="text-base font-semibold">Sling It</span>
             </a>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Create, access, and manage large quantities of recipes. Ready to share with anyone and everyone.
             </p>
-            <div className="flex items-center gap-4 pt-2">
+            {/* links to social  */}
+            {/* <div className="flex items-center gap-4 pt-2">
               <a
                 aria-label="Twitter/X"
                 href="#"
@@ -80,7 +84,7 @@ export default function Footer() {
                   <path d="M6.94 8.5V21H3.56V8.5h3.38ZM5.25 3a2.06 2.06 0 1 1 0 4.12A2.06 2.06 0 0 1 5.25 3Zm6.7 7.1c1.77 0 2.97.92 3.5 1.87V8.5h3.36V21h-3.36v-6.11c0-1.55-.98-2.58-2.3-2.58-1.22 0-2.02.83-2.35 1.62-.12.28-.15.68-.15 1.08V21h-3.36s.04-10.5 0-12.5h3.36v1.73c.45-.69 1.25-1.63 2.9-1.63Z" />
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -143,7 +147,7 @@ export default function Footer() {
             <p className="text-xs text-gray-500 dark:text-gray-400">
               © {new Date().getFullYear()} Sling It. All rights reserved.
             </p>
-            <div className="flex gap-4 text-xs">
+            {/* <div className="flex gap-4 text-xs">
               <a
                 href="#privacy"
                 className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
@@ -162,7 +166,7 @@ export default function Footer() {
               >
                 Status
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
