@@ -1,7 +1,9 @@
+import { HashLink } from "react-router-hash-link";
+
 export default function Footer() {
   const product = [
-    { label: "Features", href: "#features" },
-    { label: "Blog", href: "#blog" },
+    { label: "Features" },
+    { label: "Blog", href: "/blog" },
     // { label: "Pricing", href: "#pricing" },
     // { label: "Integrations", href: "#integrations" },
     // { label: "Changelog", href: "#changelog" },
@@ -38,7 +40,8 @@ export default function Footer() {
               <span className="text-base font-semibold">Sling It</span>
             </a>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Create, access, and manage large quantities of recipes. Ready to share with anyone and everyone.
+              Create, access, and manage large quantities of recipes. Ready to
+              share with anyone and everyone.
             </p>
             {/* links to social  */}
             {/* <div className="flex items-center gap-4 pt-2">
@@ -92,16 +95,28 @@ export default function Footer() {
               Product
             </h3>
             <ul className="mt-4 space-y-2">
-              {product.map((l) => (
-                <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
+              {product.map((l) =>
+                l.href ? (
+                  <li key={l.label}>
+                    <a
+                      href={l.href}
+                      className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li>
+                    <HashLink
+                      className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                      smooth
+                      to="/#Features"
+                    >
+                      {l.label}
+                    </HashLink>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
