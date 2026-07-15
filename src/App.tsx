@@ -26,9 +26,9 @@ function App() {
       <NavBar
         logo={"SLING IT"}
         links={[
-          { label: "Features", function: scrollToFeature },
-          { label: "Docs", href: "docs/?section=getting-started" },
-          { label: "Blog", href: "blog" },
+          { label: "Features"},
+          { label: "Docs", href: "/docs/?section=getting-started" },
+          { label: "Blog", href: "/blog" },
         ]}
         cta={{
           label: "Get Started",

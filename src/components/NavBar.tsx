@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 import ToggleThemeSwitch from "./ToggleThemeSwtich";
 
@@ -49,14 +50,14 @@ function NavBar({ logo, links, cta }: NavBarProps) {
           {/* Center: desktop links */}
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) =>
-              l.function ? (
-                <button className={linkStyles} onClick={() => l.function()}>
-                  {l.label}
-                </button>
-              ) : (
+              l.href ? (
                 <a key={l.label} href={l.href} className={linkStyles}>
                   {l.label}
                 </a>
+              ) : (
+                <HashLink className={linkStyles} smooth to="/#Features">
+                  Features
+                </HashLink>
               ),
             )}
           </nav>
