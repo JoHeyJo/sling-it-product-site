@@ -55,7 +55,12 @@ function NavBar({ logo, links, cta }: NavBarProps) {
                   {l.label}
                 </a>
               ) : (
-                <HashLink className={linkStyles} smooth to="/#Features">
+                <HashLink
+                  key={l.label}
+                   className={linkStyles}
+                  smooth
+                  to="/#Features"
+                >
                   Features
                 </HashLink>
               ),

@@ -16,8 +16,9 @@ function Home() {
           label: "Get Started",
           href: productSite,
         }}
+        videoUrl="/sing-it-preview.mp4"
         secondaryCta={{ label: "View Docs", href: "/docs/?section=getting-started" }}
-        screenshotUrl="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1800&auto=format&fit=crop"
+        screenshotUrl="/slingit-poster.jpg"
         stats={[
           { label: "Teams", value: "3k+" },
           { label: "Uptime", value: "99.99%" },

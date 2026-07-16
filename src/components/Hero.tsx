@@ -1,5 +1,6 @@
 import { bgGradient, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
 import LogoTicker from "./LogoTicker";
+import VideoSnippet from "./VideoSnippet";
 
 /**
  * Hero (Responsive)
@@ -59,11 +60,11 @@ export default function Hero({
         <div className="grid items-center gap-y-12 gap-x-8 md:grid-cols-2">
           {/* Copy column */}
           <div>
-            {eyebrow && (
+            {/* {eyebrow && (
               <p className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-700 ring-1 ring-inset ring-indigo-200 dark:bg-indigo-950 dark:text-indigo-300 dark:ring-indigo-900/60">
                 {eyebrow}
               </p>
-            )}
+            )} */}
 
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
               {title}
@@ -103,18 +104,9 @@ export default function Hero({
           {/* Media column */}
           <div className="relative">
             <div className="relative mx-auto w-full max-w-2xl">
-              {/* Browser chrome mock */}
-              <div className="pointer-events-none absolute inset-x-0 top-0 z-10 mx-auto h-8 w-[95%] rounded-t-2xl border border-b-0 border-black/10 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-white/5" />
-
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl ring-1 ring-black/5 dark:border-white/10 dark:bg-white/5 dark:ring-white/10">
                 {videoUrl ? (
-                  <video
-                    className="h-full w-full object-cover"
-                    src={videoUrl}
-                    poster={screenshotUrl}
-                    controls
-                    preload="none"
-                  />
+                <VideoSnippet src={videoUrl} className={"demo-video"} poster={screenshotUrl}/>
                 ) : (
                   <img
                     src={
