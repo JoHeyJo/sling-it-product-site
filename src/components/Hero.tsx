@@ -37,7 +37,7 @@ export default function Hero({
   logos,
 }: HeroProps) {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section id="About" className="relative isolate overflow-hidden">
       {/* Decorative gradient background */}
       <div
         aria-hidden

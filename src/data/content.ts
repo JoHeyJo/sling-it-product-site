@@ -29,7 +29,7 @@ export const information = [
   {
     leftCard: "Getting started is easy",
     leftInfo: [
-      "One app all, your recipes.",
+      "One app, all your recipes.",
       "Reads like a book.",
       "Create, access, manage.",
     ],
@@ -40,7 +40,7 @@ export const information = [
 
     rightCard: "Create and manage your recipes",
     rightInfo: [
-      "Categorize drinks by recipe book or consolidate in one.",
+      "Categorize drinks by recipe book or consolidate into one.",
       "Create once - reuse whenever you need it.",
       "Quickly select tracked inventory for any new recipe.",
     ],

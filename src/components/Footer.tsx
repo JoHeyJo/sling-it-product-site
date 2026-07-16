@@ -9,15 +9,18 @@ export default function Footer() {
     // { label: "Changelog", href: "#changelog" },
   ];
   const company = [
-    { label: "About", href: "#about" },
-    { label: "LinkedIn", href: "#linkedin" },
+    { label: "About" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/joannes-figueroa" },
     // { label: "Careers", href: "#careers" },
     // { label: "Press", href: "#press" },
     // { label: "Contact", href: "#contact" },
   ];
   const resources = [
-    { label: "Docs", href: "#docs" },
-    { label: "Github", href: "#github" },
+    { label: "Docs", href: "/docs/?section=getting-started" },
+    {
+      label: "Github",
+      href: "https://github.com/JoHeyJo/sling-it-product-site",
+    },
     // { label: "API", href: "#api" },
     // { label: "Guides", href: "#guides" },
     // { label: "Support", href: "#support" },
@@ -127,12 +130,22 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {company.map((l) => (
                 <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    {l.label}
-                  </a>
+                  {l.href ? (
+                    <a
+                      href={l.href}
+                      className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                    >
+                      {l.label}
+                    </a>
+                  ) : (
+                    <HashLink
+                      className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                      smooth
+                      to="/#About"
+                    >
+                      {l.label}
+                    </HashLink>
+                  )}
                 </li>
               ))}
             </ul>
