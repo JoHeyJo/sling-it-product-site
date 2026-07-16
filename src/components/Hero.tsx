@@ -105,21 +105,8 @@ export default function Hero({
           <div className="relative">
             <div className="relative mx-auto w-full max-w-2xl">
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl ring-1 ring-black/5 dark:border-white/10 dark:bg-white/5 dark:ring-white/10">
-                {videoUrl ? (
                 <VideoSnippet src={videoUrl} className={"demo-video"} poster={screenshotUrl}/>
-                ) : (
-                  <img
-                    src={
-                      screenshotUrl ||
-                      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1800&auto=format&fit=crop"
-                    }
-                    alt="Product screenshot"
-                    className="h-full w-full object-cover"
-                    loading="eager"
-                    width={1600}
-                    height={1000}
-                  />
-                )}
+                
               </div>
             </div>
           </div>

@@ -53,6 +53,7 @@ export default function VideoSnippet({
     observer.observe(el);
     return () => observer.disconnect();
   }, [autoPlayInView]);
+  
 
   if (failed) {
     return (
