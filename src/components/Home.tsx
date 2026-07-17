@@ -16,7 +16,7 @@ function Home() {
           label: "Get Started",
           href: productSite,
         }}
-        videoUrl="/sing-it-preview.mp4"
+        videoUrl="/sing-it.mp4"
         secondaryCta={{ label: "View Docs", href: "/docs/?section=getting-started" }}
         screenshotUrl="/slingit-poster.jpg"
         stats={[

@@ -31,6 +31,8 @@ export default function VideoSnippet({
   const videoRef = useRef(null);
   const [failed, setFailed] = useState(false);
 
+  console.log("src:", src)
+
   useEffect(() => {
     const el = videoRef.current;
     if (!el || !autoPlayInView) return;
@@ -54,6 +56,9 @@ export default function VideoSnippet({
     return () => observer.disconnect();
   }, [autoPlayInView]);
   
+  useEffect(() => {
+    setFailed(false);
+  }, [src]);
 
   if (failed) {
     return (
@@ -81,13 +86,17 @@ export default function VideoSnippet({
   return (
     <video
       ref={videoRef}
+      src={src}
       poster={poster}
       loop={loop}
       muted
       playsInline
       controls={controls}
       preload="metadata"
-      onError={() => setFailed(true)}
+      onError={(e) => {
+        console.log("video error", e.currentTarget.error);
+        setFailed(true);
+      }}
       className={className}
       style={{
         width: "100%",
@@ -100,7 +109,7 @@ export default function VideoSnippet({
       }}
     >
       {/* {webmSrc && <source src={webmSrc} type="video/webm" />} */}
-      <source src={src} type="video/mp4" />
+      {/* <source src={src} type="video/mp4" /> */}
     </video>
   );
 }
