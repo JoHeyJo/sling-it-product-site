@@ -1,14 +1,9 @@
 import { useState, useRef, useLayoutEffect, useCallback } from "react";
-import {
-  Folder,
-  FolderOpen,
-  ChevronRight,
-  Hash,
-} from "lucide-react";
+import { Folder, FolderOpen, ChevronRight, Hash } from "lucide-react";
 import { directories } from "../data/directories";
 import { useSearchParams } from "react-router-dom";
 
- import { cardBorder, bgGradient } from "../styles";
+import { cardBorder, bgGradient } from "../styles";
 import { MonoPanel } from "../components/MonoPanel";
 /* ------------------------------------------------------------------ *
  * Palette (from the provided design tokens).
@@ -43,7 +38,7 @@ export default function Documentation() {
   const selectedSectionId = searchParams.get("section");
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [dark, setDark] = useState(false);
+  const [dark] = useState(false);
   const [selectedId, setSelectedId] = useState(selectedSectionId);
   const [brace, setBrace] = useState(null);
 
@@ -193,7 +188,9 @@ export default function Documentation() {
                     return (
                       <li key={dir.id}>
                         <button
-                          ref={(el) => (itemRefs.current[dir.id] = el)}
+                          ref={(el) => {
+                            itemRefs.current[dir.id] = el;
+                          }}
                           onClick={() => setSelectedId(dir.id)}
                           aria-current={active ? "true" : undefined}
                           className={[
