@@ -31,8 +31,6 @@ export default function VideoSnippet({
   const videoRef = useRef(null);
   const [failed, setFailed] = useState(false);
 
-  console.log("src:", src)
-
   useEffect(() => {
     const el = videoRef.current;
     if (!el || !autoPlayInView) return;

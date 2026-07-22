@@ -37,7 +37,6 @@ export default function Hero({
   stats,
   logos,
 }: HeroProps) {
-  console.log("videoURL:",videoUrl)
   return (
     <section id="About" className="relative isolate overflow-hidden">
       {/* Decorative gradient background */}
