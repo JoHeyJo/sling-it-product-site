@@ -23,7 +23,7 @@ export default function VideoSnippet({
   poster,
   loop = true,
   autoPlayInView = true,
-  controls = false,
+  controls = true,
   aspectRatio = "16 / 9",
   className = "",
   style = {},

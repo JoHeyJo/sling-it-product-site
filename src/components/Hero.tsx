@@ -102,14 +102,11 @@ export default function Hero({
           </div>
 
           {/* Media column */}
-          <div className="relative">
             <div className="relative mx-auto w-full max-w-2xl">
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl ring-1 ring-black/5 dark:border-white/10 dark:bg-white/5 dark:ring-white/10">
+              <div className="relative w-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl ring-1 ring-black/5 dark:border-white/10 dark:bg-white/5 dark:ring-white/10">
                 <VideoSnippet src={videoUrl} className={"demo-video"} poster={screenshotUrl}/>
-                
               </div>
             </div>
-          </div>
         </div>
 
         {/* Logo ticker */}
