@@ -2,9 +2,9 @@ import { HashLink } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 import ToggleThemeSwitch from "./ToggleThemeSwtich";
 
-type NavLink = { label: string; href?: string; function?: Function };
+type NavLink = { label: string; href?: string };
 type NavBarProps = {
-  logo?: any;
+  logo?: string;
   links?: NavLink[];
   cta?: { label: string; href: string };
 };

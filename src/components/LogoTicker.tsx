@@ -40,7 +40,7 @@ const doubled = useMemo(() => items.concat(items), [items]);
           className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent dark:from-gray-900"
         />
         {/* Track */}
-        <Marquee pauseOnHover gradient={false} speed={0}>
+        <Marquee pauseOnHover gradient={false} speed={speed}>
           {doubled}
         </Marquee>
       </div>

@@ -1,5 +1,4 @@
-import { bgGradient, cardDimensions, darkBgGradient, darkCardBorder } from "../styles";
-import LogoTicker from "./LogoTicker";
+import { bgGradient, cardDimensions, darkBgGradient } from "../styles";
 import VideoSnippet from "./VideoSnippet";
 
 /**
@@ -27,15 +26,12 @@ export type HeroProps = {
 };
 
 export default function Hero({
-  eyebrow,
   title,
   subtitle,
   primaryCta,
   secondaryCta,
   screenshotUrl,
   videoUrl,
-  stats,
-  logos,
 }: HeroProps) {
   return (
     <section id="About" className="relative isolate overflow-hidden">

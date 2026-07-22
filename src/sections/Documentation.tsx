@@ -40,8 +40,9 @@ function bracePath({ tipX, tipY, armX, topY, botY }) {
 /* ------------------------------------------------------------------ */
 export default function Documentation() {
   const [searchParams] = useSearchParams();
-  const selectedSectionId = searchParams.get("section")
+  const selectedSectionId = searchParams.get("section");
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [dark, setDark] = useState(false);
   const [selectedId, setSelectedId] = useState(selectedSectionId);
   const [brace, setBrace] = useState(null);
@@ -51,7 +52,6 @@ export default function Documentation() {
   const itemRefs = useRef({});
 
   const selected = directories.find((d) => d.id === selectedId);
-  
 
   /* Measure the geometry the brace needs, relative to the row container. */
   const measure = useCallback(() => {
@@ -63,7 +63,7 @@ export default function Documentation() {
     const c = container.getBoundingClientRect();
     const i = item.getBoundingClientRect();
     const o = content.getBoundingClientRect();
-    
+
     setBrace({
       w: c.width,
       h: c.height,
@@ -264,7 +264,9 @@ export default function Documentation() {
                         </h3>
                         <div className="text-sm p-3 leading-relaxed text-stone-600 dark:text-stone-400">
                           {s.body.map((line, i) => (
-                            <div key={i} className="py-0.5">{line}</div>
+                            <div key={i} className="py-0.5">
+                              {line}
+                            </div>
                           ))}
                         </div>
                         {s.instructions && <MonoPanel lines={s.instructions} />}

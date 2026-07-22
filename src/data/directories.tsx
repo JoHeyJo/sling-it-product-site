@@ -182,8 +182,7 @@ export const directories = [
             you. Original author will always have control of these recipes.
             These recipes can be copied to any recipe book you own, granting
             full editorial control over them.
-          </>,
-          ,
+          </>
         ],
         instructions: [
           "Select 'Shared Recipes' from dropdown menu next to 'Recipes for:'",

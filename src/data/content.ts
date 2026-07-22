@@ -1,7 +1,5 @@
 import { productSite } from "../links";
 
-productSite
-
 export const features = [
   {
     icon: "📕",

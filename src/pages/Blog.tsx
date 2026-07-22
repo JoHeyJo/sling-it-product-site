@@ -59,7 +59,7 @@ export default function Blog() {
           ).map(({ key, label }) => (
             <button
               key={key}
-              onClick={() => setTab(key as any)}
+              onClick={() => setTab(key)}
               className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
                 tab === key
                   ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
