@@ -1,79 +1,101 @@
 import { useRef, useEffect, useState } from "react";
 
 /**
- * VideoSnippet — a reusable component for short (5–10s) looping clips.
+ * VideoSnippet (LCP-aware)
  *
- * Defaults are tuned for silent, auto-looping snippets (product highlights,
- * ambient loops, mini-demos): it plays only when scrolled into view and
- * pauses when it leaves, so a page full of clips stays light on CPU/battery.
+ * Pass priority={true} to the ONE clip that's above the fold. That clip skips
+ * lazy loading entirely and its poster is fetched at high priority — it's your
+ * LCP element, so anything that delays it delays the metric.
  *
- * Props:
- *   src            (string, required)  MP4 URL — put files in /public and pass "/clips/foo.mp4"
- *   webmSrc        (string)            Optional WebM for better compression (served first if present)
- *   poster         (string)            Image shown before the video paints
- *   loop           (bool, default true)
- *   autoPlayInView (bool, default true) Play when visible, pause when not
- *   controls       (bool, default false) Show native controls (use with autoPlayInView={false} for click-to-play + sound)
- *   aspectRatio    (string, default "16 / 9")
- *   className, style                    Passed through to the <video>
+ * Every other clip on the page should leave priority off, so it keeps the
+ * deferred fetch and in-view playback.
+ *
+ * Pair a priority clip with this in index.html <head>:
+ *   <link rel="preload" as="image" href="/poster.jpg" fetchpriority="high">
  */
 export default function VideoSnippet({
   src,
-  // webmSrc,
   poster,
   loop = true,
   autoPlayInView = true,
   controls = true,
+  priority = false,
+  preloadMargin = "300px",
   aspectRatio = "16 / 9",
   className = "",
   style = {},
 }) {
   const videoRef = useRef(null);
+  const wrapRef = useRef(null);
+  const [shouldLoad, setShouldLoad] = useState(priority); // priority starts loaded
+  const [posterHidden, setPosterHidden] = useState(false);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    const el = videoRef.current;
-    if (!el || !autoPlayInView) return;
+    setFailed(false);
+  }, [src]);
 
-    // Set muted via the DOM, not just the JSX prop — React doesn't reliably
-    // apply the `muted` attribute, and muted is required for autoplay.
-    el.muted = true;
+  // Stage 1: defer the fetch — skipped for priority clips, which must not wait on JS.
+  useEffect(() => {
+    if (priority) return;
+    const el = wrapRef.current;
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.play().catch(() => {}); // ignore autoplay rejections
-        } else {
-          el.pause();
+          setShouldLoad(true);
+          observer.disconnect();
         }
+      },
+      { rootMargin: preloadMargin },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [preloadMargin, priority]);
+
+  // Stage 2: play only while visible.
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el || !shouldLoad || !autoPlayInView) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    el.muted = true;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) el.play().catch(() => {});
+        else el.pause();
       },
       { threshold: 0.25 },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [autoPlayInView]);
-  
-  useEffect(() => {
-    setFailed(false);
-  }, [src]);
+  }, [shouldLoad, autoPlayInView]);
+
+  const frame = {
+    // position: "relative",
+    width: "100%",
+    aspectRatio,
+    display: "block",
+    borderRadius: 10,
+    overflow: "hidden",
+    background: "#1a1c20",
+    ...style,
+  };
 
   if (failed) {
     return (
       <div
         className={className}
         style={{
-          width: "100%",
-          aspectRatio,
+          ...frame,
           display: "grid",
           placeItems: "center",
-          background: poster
-            ? `center / cover no-repeat url(${poster})`
-            : "linear-gradient(135deg, #2a2d34, #3a3f4a)",
           color: "#aeb4be",
           font: "500 13px system-ui, sans-serif",
-          borderRadius: 10,
-          ...style,
         }}
       >
         Video unavailable
@@ -82,34 +104,51 @@ export default function VideoSnippet({
   }
 
   return (
-    <video
-      ref={videoRef}
-      src={src}
-      poster={poster}
-      loop={loop}
-      muted
-      playsInline
-      controls={controls}
-      preload="metadata"
-      onError={(e) => {
-        console.log("video error", e.currentTarget.error);
-        setFailed(true);
-      }}
-      className={className}
-      style={{
-        width: "100%",
-        aspectRatio,
-        objectFit: "cover",
-        display: "block",
-        borderRadius: 10,
-        background: "#1a1c20",
-        ...style,
-      }}
-    >
-      {/* {webmSrc && <source src={webmSrc} type="video/webm" />} */}
-      {/* <source src={src} type="video/mp4" /> */}
-    </video>
+    <div ref={wrapRef} style={frame} className={className}>
+      {/* A real <img>, not a CSS background: it's visible to the preload scanner
+          and it's the only form that accepts fetchPriority. */}
+      {poster && (
+        <img
+          src={poster}
+          alt=""
+          aria-hidden="true"
+          fetchPriority={"high"}
+          loading={"eager"}
+          decoding={priority ? "sync" : "async"}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            pointerEvents: "none",
+            opacity: posterHidden ? 0 : 1,
+            transition: "opacity 240ms ease",
+          }}
+        />
+      )}
+
+      <video
+        ref={videoRef}
+        src={shouldLoad ? src : undefined}
+        loop={loop}
+        muted
+        playsInline
+        controls={controls}
+        preload={priority ? "auto" : controls ? "metadata" : "none"}
+        disableRemotePlayback
+        onPlaying={() => setPosterHidden(true)}
+        onError={(e) => {
+          if (e.currentTarget.error) setFailed(true);
+        }}
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
+    </div>
   );
 }
-
-

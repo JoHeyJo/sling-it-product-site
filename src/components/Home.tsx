@@ -18,7 +18,7 @@ function Home() {
         }}
         videoUrl="/test.mp4"
         secondaryCta={{ label: "View Docs", href: "/docs/?section=getting-started" }}
-        screenshotUrl="/slingit-poster.jpg"
+        screenshotUrl="/poster.jpg"
         stats={[
           { label: "Teams", value: "3k+" },
           { label: "Uptime", value: "99.99%" },
