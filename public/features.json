@@ -5,7 +5,6 @@
     "status": "shipped",
     "pullRequest": null,
     "date": "2025-10-01",
-    "version": "v0.7.0",
     "summary": "Site-wide theme switch with graceful transitions, supports manual toggle and prefers-color-scheme (system).",
     "details": [
       "Tailwind darkMode=\"class\" with safe-listed tokens for key surfaces",
@@ -20,7 +19,6 @@
     "status": "in-progress",
     "pullRequest": null,
     "date": "2025-10-08",
-    "version": "v0.7.2",
     "summary": "Smooth, continuous marquee for partner logos with edge fades and reduced GPU jank.",
     "details": [
       "Duplicated-track technique for seamless loop",
@@ -35,7 +33,6 @@
     "status": "shipped",
     "pullRequest": null,
     "date": "2025-10-09",
-    "version": "v0.7.3",
     "summary": "Layered cards with subtle top blur suggesting stacking; gradient surfaces for light/dark modes.",
     "details": [
       "Gradient surface: light → from-stone-200 to gray-50/60; dark → gray-900/90 to gray-800/80",
@@ -57,8 +54,7 @@
       "NGINX proxy_* directives refined for SSE/WebSockets",
       "Systemd service with journalctl live follow documented"
     ],
-    "tags": ["backend", "infra", "devops"],
-    "links": [{ "label": "Infra notes", "href": "#" }]
+    "tags": ["backend", "infra", "devops"]
   },
   {
     "id": "recipes-model",
@@ -74,5 +70,18 @@
     ],
     "tags": ["backend", "database"],
     "links":[{"label": "Commit", "href": "https://github.com/JoHeyJo/recipe-backend/commit/d1072a4552ba6f0aaad85bbb5c3eaf39ca9c82f7"}]
+  },
+  {
+    "id": "search-recipe-front",
+    "title": "Search the web - recipes",
+    "status": "in-progress",
+    "date": "2026-07-23",
+    "summary": "Allows users to search the web right from their in app search bar.",
+    "details": [
+      "Recipes can then be automatically added to their own recipe books",
+      "User can choose to edit before adding new recipe.",
+      "Highly improves efficiency of finding and adding new recipes!"
+    ],
+    "tags": ["frontend", "ui"]
   }
 ]
